@@ -14482,7 +14482,7 @@ body {
     top: -500px;
     height: auto;
     bottom: auto;
-    overflow-y: auto;
+    overflow-y: auto !important;
   }
 
   .nav.active {
