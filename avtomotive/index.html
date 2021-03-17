@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=PT+Serif&display=swap"
+        rel="stylesheet">
+    <title>avtomotive</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__body">
+                    <div class="container">
+                        <div class="header__inner">
+                            <div class="header__logo">
+                                <a class="logo" href="#">avtomotive</a>
+                            </div>
+
+                            <div class="burger">
+                                <div onclick="openBurger()" class="header__burger">
+                                    <span></span>
+                                </div>
+                            </div>
+
+                            <div class="burger__full"></div>
+
+                            <nav class="navs">
+                                <ul class="nav">
+                                    <li>
+                                        <a href="#" class="nav_link">HOME</a>
+                                    </li>
+                                    <li>
+                                        <a href="#story" class="nav_link">ABOUT</a>
+                                    </li>
+                                    <li>
+                                        <a href="#services" class="nav_link">SERVICES</a>
+                                    </li>
+                                    <li>
+                                        <a href="#testimonial" class="nav_link">GALLERY</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav_link">CONTACT</a>
+                                    </li>
+                                    <li class="reg">registration</li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sell -->
+
+                <div class="sell">
+                    <div class="sell__inner">
+                        <div class="sell__inner__title">
+                            <h1>SELL YOUR <br>
+                                <span>CAR NOW</span>
+                            </h1>
+                        </div>
+                        <div class="sell__inner__text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                            has
+                            been
+                            the industry's standard dummy text ever since the 1500s
+                        </div>
+                    </div>
+
+                    <!-- window registration -->
+
+                    <div class="sell__block">
+                        <div class="sell__block__inner">
+                            <div class="sell__block__title">
+                                REQUEST A QUOTE
+                            </div>
+
+
+
+                            <form action="#">
+                                <div class="sell__block__content">
+                                    <input name="name" class="sell__block__item" type="text" placeholder="Full Name">
+                                    <input name="mail" class="sell__block__item" type="email"
+                                        placeholder="Email Adress">
+                                    <input name="phone" class="sell__block__item" type="tel" placeholder="Phone Number">
+                                    <input name="Country" class="sell__block__item" type="text" placeholder="Country">
+
+
+                                    <div class="sell__accept">
+                                        <input id="accept" class="accept__checkbox" name="accept" type="checkbox">
+                                        <label for="accept" class="accept">I accept the terms
+                                            & <a href="">conditions</a></label>
+                                    </div>
+                                    <div class="sell__button">
+                                        <button type="submit" class="button btn_red btn_lang">SEND</button>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </header>
+
+
+
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="services__title">
+                <h1><span>OUR</span> SERVICES</h1>
+            </div>
+
+            <div class="services__inner">
+                <div class="services__block">
+                    <picture>
+                        <source srcset="img/serv-1.webp" type="image/webp"><img src="img/serv-1.png" alt="heart">
+                    </picture>
+                    <h2 class="services__text">Making your trip
+                        beautiful and easier</h2>
+                </div>
+                <div class="services__block">
+                    <picture>
+                        <source srcset="img/serv-2.webp" type="image/webp"><img src="img/serv-2.png" alt="heart">
+                    </picture>
+                    <h2 class="services__text">Tools to help you
+                        succeed tommorow</h2>
+                </div>
+                <div class="services__block">
+                    <picture>
+                        <source srcset="img/serv-3.webp" type="image/webp"><img src="img/serv-3.png" alt="heart">
+                    </picture>
+                    <h2 class="services__text">Ideas that will blow
+                        you out the blue</h2>
+                </div>
+                <div class="services__block">
+                    <picture>
+                        <source srcset="img/serv-4.webp" type="image/webp"><img src="img/serv-4.png" alt="heart">
+                    </picture>
+                    <h2 class="services__text">Navigate your path
+                        to beautiful world</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="story" class="story">
+        <div class="container">
+            <div class="story__inner">
+                <div class="story__text">
+                    We are in business for over 6 years providing amazing services to client
+                    and people love them to the core. View our story to know more.
+                </div>
+                <button type="button" class="button btn_red btn_short">OUR STORY</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="price">
+        <div class="container">
+            <div class="price__title">
+                <h1>PRICING</h1>
+            </div>
+
+            <div class="price__inner">
+                <div class="price__block">
+                    <div class="price__block__title">
+                        Starter
+                    </div>
+
+                    <div class="price__block__price">
+                        FREE
+                    </div>
+
+                    <ul class="price__block__item">
+                        <li class="price__block__item_link">Free Service
+                        <li class="price__block__item_link">Multiple Accounts</li>
+                        <li class="price__block__item_link">Management No</li>
+                        <li class="price__block__item_link">--</li>
+                        <li class="price__block__item_link">--</li>
+                    </ul>
+
+                    <button type="button" class="button btn_blue">TRY</button>
+                </div>
+
+
+
+                <div class="price__block">
+                    <div class="price__block__title">
+                        Business
+                    </div>
+
+                    <div class="price__block__popular"></div>
+
+                    <div class="price__block__price">
+                        $97
+                    </div>
+
+                    <ul class="price__block__item">
+                        <li class="price__block__item_link">Free Service
+                        <li class="price__block__item_link">Multiple Accounts</li>
+                        <li class="price__block__item_link">Management No</li>
+                        <li class="price__block__item_link">Unlimited Data</li>
+                        <li class="price__block__item_link">--</li>
+                    </ul>
+
+                    <button type="button" class="button btn_blue">SIGN UP</button>
+                </div>
+
+
+
+                <div class="price__block">
+                    <div class="price__block__title">
+                        Professional
+                    </div>
+
+                    <div class="price__block__price">
+                        $297
+                    </div>
+
+                    <ul class="price__block__item">
+                        <li class="price__block__item_link">Free Service
+                        <li class="price__block__item_link">Multiple Accounts</li>
+                        <li class="price__block__item_link">Management No</li>
+                        <li class="price__block__item_link">Unlimited Data</li>
+                        <li class="price__block__item_link">Whatever You Need</li>
+                    </ul>
+
+                    <button type="button" class="button btn_blue">SIGN UP</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonial" class="testimonial">
+        <div class="container">
+            <div class="testimonial__inner">
+                <div class="testimonial__review">
+                    <div class="testimonial__title">
+                        TESTIMONIAL
+                    </div>
+
+                    <!-- testimonial block -->
+
+                    <div class="testimonial__review__block">
+                        <div class="testimonial__review__block__item">
+                            <div class="testimonial__text">
+                                I have been involved with this comapny for ages and just want to say this is a great
+                                work by
+                                designcoon.
+                            </div>
+
+                            <div class="testimonial__review__block__img">
+                                <picture>
+                                    <source srcset="img/man-1.webp" type="image/webp"><img src="img/man-1.png" alt="">
+                                </picture>
+                            </div>
+
+                            <div class="testimonial__name">
+                                <a class="testimonial__name" href="">DJ Bravo - Frequent Travelera</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial__review__block testimonial__review__block__grey">
+                        <div class="testimonial__review__block__item">
+                            <div class="testimonial__text testimonial__text_red">
+                                I have been involved with this comapny for ages and just .
+                            </div>
+
+                            <div class="testimonial__review__block__img">
+                                <picture>
+                                    <source srcset="img/man-2.webp" type="image/webp"><img src="img/man-2.png" alt="">
+                                </picture>
+                            </div>
+
+                            <div class="testimonial__name">
+                                <a class="testimonial__name" href="">DJ Bravo - Frequent Travelera</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- testimonial gallery -->
+                <div class="testimonial__gallery">
+                    <div class="testimonial__title red">
+                        GALLERY
+                    </div>
+                    <div class="galleria">
+                        <div class="testimonial__gallery__block">
+                            <a class="testimonial__gallery__img" href="#">
+                                <picture>
+                                    <source srcset="img/gallery-1.webp" type="image/webp"><img src="img/gallery-1.png"
+                                        alt="man">
+                                </picture>
+                            </a>
+                            <a class="testimonial__gallery__img" href="#">
+                                <picture>
+                                    <source srcset="img/gallery-2.webp" type="image/webp"><img src="img/gallery-2.png"
+                                        alt="man">
+                                </picture>
+                            </a>
+                            <a class="testimonial__gallery__img" href="#">
+                                <picture>
+                                    <source srcset="img/gallery-3.webp" type="image/webp"><img src="img/gallery-3.png"
+                                        alt="man">
+                                </picture>
+                            </a>
+                            <a class="testimonial__gallery__img" href="#">
+                                <picture>
+                                    <source srcset="img/gallery-4.webp" type="image/webp"><img src="img/gallery-4.png"
+                                        alt="man">
+                                </picture>
+                            </a>
+                            <a class="testimonial__gallery__img" href="#">
+                                <picture>
+                                    <source srcset="img/gallery-5.webp" type="image/webp"><img src="img/gallery-5.png"
+                                        alt="man">
+                                </picture>
+                            </a>
+                            <a class="testimonial__gallery__img" href="#">
+                                <picture>
+                                    <source srcset="img/gallery-6.webp" type="image/webp"><img src="img/gallery-6.png"
+                                        alt="man">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="testimonial__gallery__text">
+                        <a class="testimonial__gallery__more" href="">VIEW MORE PICTURES</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__left">
+                    All Rights Reserved | 2016 | Designed with love by <span>DesignCoon</span>
+                </div>
+
+                <a class="logo logo_red" href="#">automotive</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
