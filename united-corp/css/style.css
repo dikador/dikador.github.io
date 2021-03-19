@@ -14570,6 +14570,11 @@ body {
     width: 400px;
   }
 
+  .starts-img {
+    margin-left: auto;
+    
+  }
+
   .starts-block {
     max-width: 680px;
     margin: auto 0px auto auto;
