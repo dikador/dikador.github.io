@@ -4738,7 +4738,7 @@ body.lock {
   width: 30px;
   height: 30px;
   z-index: 2;
-  top: 0;
+  top: -6px !important;
   left: -10px;
 }
 
@@ -10208,8 +10208,8 @@ body {
 }
 
 .button-page {
-  width: 380px;
   font-weight: 400px;
+  width:380px;
 }
 
 .btn-mini {
@@ -10313,6 +10313,14 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+@media(max-width: 800px) {
+  .button-page {
+    font-weight: 400px;
+    width:280px;
+    font-size: 15px;
+  }
 }
 
 @media (min-width: 576px) {
@@ -14482,7 +14490,6 @@ body {
     top: -500px;
     height: auto;
     bottom: auto;
-    overflow-y: auto !important;
   }
 
   .nav.active {
@@ -14859,7 +14866,11 @@ body {
   }
 
   .page-info {
-    padding: 45px 55px;
+    padding: 45px 15px;
+  }
+
+  .page-info__text {
+    padding: 0;
   }
 
   .page__block-input {
@@ -14885,6 +14896,11 @@ body {
     margin-top: 20px;
     padding: 0 !important;
   }
+
+  .title-blogs {
+    font-size: 30px;
+    margin: 0px !important;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -14907,6 +14923,24 @@ body {
     -ms-flex: 0 0 76%;
     flex: 0 0 76%;
   }
+
+  .button-page {
+    font-size: 14px;
+    width: 240px;
+  }
+
+  .starts-block {
+    margin-top: 40px !important;
+  }
+
+  .starts__road:after {
+    height: 173px;
+}
+
+.starts__road span:after {
+  width: 19px;
+  right: -35px;
+}
 }
 
 @media (max-width: 600px) {
@@ -15010,12 +15044,37 @@ body {
   .services__text {
     font-size: 16px;
   }
+
+  .page-button {
+    margin-top: 10px !important;
+  }
+
+  .button-page {
+    width: 90%;
+    margin-top: 20px;
+    margin-right: 0px !important;
+  }
+
+  .starts-block {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
 }
 
 @media (max-width: 460px) {
   .intro__right::before {
     display: none;
   }
+
+  .starts__left{
+    display: none !important;
+  }
+
+.starts-img {
+  width: 100%;
+  flex: 0 0 100% !important;
+  max-width: 100%;
+}
 
   .drop {
     left: 230px !important;
