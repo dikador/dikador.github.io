@@ -39,10 +39,6 @@ $(document).ready(function () {
       $(this).toggleClass('active')
    });
 
-
-
-
-
    let cdlDriverPosition = $(".cdl_driver_pos")
    let substance_drive = $(".substance_drive")
 
@@ -102,6 +98,7 @@ $(document).ready(function () {
          if (ticketsDrive.checked) {
          }
       }
+
       let accidentsDrive = $("#accidentsDrive").val().trim();
 
       $.ajax({
