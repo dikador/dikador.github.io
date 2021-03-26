@@ -1100,7 +1100,7 @@ button {
 .contact__input {
   margin-top: 77px;
   width: 553px;
-  padding: 28px 20px 28px 21px;
+  padding: 24px 18px 24px 19px;
   border-radius: 10px;
   background-color: #ffffff;
   font-family: "Open Sans";
@@ -1111,8 +1111,8 @@ button {
 }
 
 .contact__input:focus {
-  -webkit-box-shadow: 13px 11px 8px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 13px 11px 8px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 13px 11px 8px 0px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 13px 11px 8px 0px rgba(0, 0, 0, 0.2) inset;
 }
 
 .contact__input:nth-child(2) {
