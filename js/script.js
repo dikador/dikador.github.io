@@ -24,12 +24,6 @@ $(window).on("scroll", function () {
     }
 });
 
-
-
-
-
-
-
 const popupLinks = document.querySelectorAll('.popup-link')
 const body = document.querySelector('body')
 const lockPadding = document.querySelectorAll('.lock-padding')
@@ -98,7 +92,7 @@ function bodyLock() {
         }
     }
 
-    body.style.marginRight = lockPaddingValue;
+    body.style.paddingRight = lockPaddingValue;
     body.classList.add('lock');
 
     unlock = false;
@@ -111,9 +105,9 @@ function bodyUnLock() {
     setTimeout(function () {
         for (let index = 0; index < lockPadding.length; index++) {
             const element = lockPadding[index];
-            element.style.marginRight = '0px';
+            element.style.paddingRight = '0px';
         }
-        body.style.marginRight = '0px';
+        body.style.paddingRight = '0px';
         body.classList.remove('lock')
     }, timeout);
 
