@@ -503,11 +503,11 @@
                     <h2>Subscribe now</h2>
                     <hr>
                 </div>
-                <form action="">
+                <form class="form-val" action="">
                     <div class="subscribe__input">
-                        <input class="input__data" name="name" type="text" placeholder="Name">
-                        <input class="input__data data_input" name="name" type="email" placeholder="Example@gmail.com">
-                        <button class="button btn-blue btn-input" type="submit">subscribe</button>
+                        <input required id="name" class="input__data" name="name" type="text" placeholder="Name">
+                        <input required id="mail" class="input__data data_input" name="mail" type="email" placeholder="Example@gmail.com">
+                        <button id="form-button" class="button btn-blue btn-input" type="submit">subscribe</button>
                     </div>
                 </form>
             </section>
@@ -665,7 +665,6 @@
 
 
         <div id="popup" class="popup">
-
             <a href="#" class="popup__full close-popup"></a>
 
             <div class="popup__body">
@@ -673,24 +672,18 @@
                     <a href="#" class="popup__closes close-popup">
                         <img src="img/close.svg" alt="exit">
                     </a>
-
                     <form class="popup__form" action="#" method="POST">
                         <div class="popup__input">
-                            <input class="popups" type="text" name="login" placeholder="Login">
-                            <input class="popups" type="password" name="Password" placeholder="Password">
+                            <input class="popups" id="login" type="text" name="login" placeholder="Login">
+                            <input class="popups" id="password" type="password" name="Password" placeholder="Password">
                         </div>
 
-                        <button class="btn btn_transp-blue" type="submit">login</button>
+                        <button id="login-button" class="btn btn_transp-blue" type="submit">login</button>
                     </form>
                 </div>
             </div>
         </div>
-
-
-
     </div>
-
-
 
 
 
@@ -703,6 +696,7 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="js/slick.min.min.js"></script>
+    <script src="js/forms.js"></script>
     <script src="js/script.js"></script>
 </body>
 
