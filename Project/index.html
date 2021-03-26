@@ -1097,10 +1097,11 @@
             <!-- !Contact content -->
 
             <div class="contact__content">
-                <form action="#" method="POST">
-                    <input required class="contact__input" name="name" type="text" placeholder="Your NAME">
-                    <input required class="contact__input" name="mail" type="email" placeholder="Your Email">
-                    <textarea class="contact__input input__lang" cols="30" rows="1" name="mail" type="email" placeholder="Write Massage"></textarea>
+                <form class="form-val" action="#" method="POST">
+                    <input required id="Name" class="contact__input" name="name" type="text" placeholder="Your NAME">
+                    <input required id="mail" class="contact__input" name="mail" type="email" placeholder="Your Email">
+                    <textarea id="message" class="contact__input input__lang" cols="30" rows="1" name="mail" type="email"
+                        placeholder="Write Massage"></textarea>
                     <div class="contact__button">
                         <button type="submit" class="button btn--white">SEND</button>
                     </div>
@@ -1116,6 +1117,7 @@
 
     <script src=" https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/forms.js"></script>
     <script src="js/script.js"></script>
 </body>
 
