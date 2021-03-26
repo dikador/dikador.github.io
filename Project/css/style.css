@@ -1111,8 +1111,8 @@ button {
 }
 
 .contact__input:focus {
-  -webkit-box-shadow: 13px 11px 8px 0px rgba(0, 0, 0, 0.2) inset;
-  box-shadow: 13px 11px 8px 0px rgba(0, 0, 0, 0.2) inset;
+  -webkit-box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.2) inset;
 }
 
 .contact__input:nth-child(2) {
