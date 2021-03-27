@@ -15401,3 +15401,15 @@ body {
     opacity: 0;
   }
 }
+
+.input__forms-val_error {
+   box-shadow: 0px 0px 10px 8px rgba(255, 0, 0, 0.16);
+}
+
+.input__forms-val_error:focus {
+  box-shadow: 0px 0px 12px 14px rgba(255, 0, 0, 0.16);
+}
+
+.checkbox__quad-val_error {
+  color: red;
+}

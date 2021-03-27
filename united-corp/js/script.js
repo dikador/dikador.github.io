@@ -39,182 +39,62 @@ $(document).ready(function () {
       $(this).toggleClass('active')
    });
 
-   let cdlDriverPosition = $(".cdl_driver_pos")
-   let substance_drive = $(".substance_drive")
 
 
-   let yearsDrtiverPos = $(".yearsDrtiverPos")
-   let duiDriverPos = $(".duiDriverPos")
+   $('#sendOffice').click(function (e) {
+      e.preventDefault()
+      let namesInput = $('#first_office').val().trim();
+      let lastsInput = $('#lastName_office').val().trim();
+      let homesInput = $('#citstz_office').val().trim();
+      let phonesInput = $('#phone_office').val().trim();
 
+      let mailsInput = $('#mail_office').val().trim();
 
-   let companies_drive = $(".companies_drive")
-   let ticket_drive = $(".ticket_drive")
-
-
-
-   $('#sendDrive').click(function (e) {
-
-      e.preventDefault();
-
-      let position = $("#position")[0].value
-
-      let lastNamedrive = $("#lastName-drive").val().trim();
-
-      let zipDrive = $("#zipDrive").val().trim();
-
-      for (let cdlDrive of cdlDriverPosition) {
-         if (cdlDrive.checked) {
-         }
-      }
-      for (let substance_drive of substance_drive) {
-         if (substance_drive.checked) {
-         }
+      if (namesInput.length < 2) {
+         $('#first_office').addClass('input__forms-val_error');
+      } else {
+         $('#first_office').removeClass('input__forms-val_error');
       }
 
-      let firstName_drive = $("#firstName_drive").val().trim();
 
-      let cityDrive = $("#cityDrive").val().trim();
-
-      let mailDrive = $("#mailDrive").val().trim();
-
-      for (let years of yearsDrtiverPos) {
-         if (years.checked) {
-         }
-      }
-      for (let duiDrive of duiDriverPos) {
-         if (duiDrive.checked) {
-         }
+      if (lastsInput.length < 2) {
+         $('#lastName_office').addClass('input__forms-val_error');
+      } else {
+         $('#lastName_office').removeClass('input__forms-val_error');
       }
 
-      let middleDrive = $("#middleDrive").val().trim();
-      let stateDrive = $("#stateDrive").val().trim();
-      let phoneDrive = $("#phoneDrive").val().trim();
 
-      for (let companiesDrive of companies_drive) {
-         if (companiesDrive.checked) {
-         }
-      }
-      for (let ticketsDrive of ticket_drive) {
-         if (ticketsDrive.checked) {
-         }
+      if (homesInput.length < 3) {
+         $('#citstz_office').addClass('input__forms-val_error');
+      } else {
+         $('#citstz_office').removeClass('input__forms-val_error');
       }
 
-      let accidentsDrive = $("#accidentsDrive").val().trim();
 
-      $.ajax({
-         type: "POST",
-         url: "ajax/mail.php",
-         cache: false,
-         data: {
-            "position": position,
-            "lastNamedrive": lastNamedrive,
-            "zipDrive": zipDrive,
-            "cdlDrive": cdlDrive,
-            "substance_drive": substance_drive,
-            "firstName_drive": firstName_drive,
-            "cityDrive": cityDrive,
-            "mailDrive": mailDrive,
-            "years": years,
-            "duiDrive": duiDrive,
-            "middleDrive": middleDrive,
-            "stateDrive": stateDrive,
-            "phoneDrive": phoneDrive,
-            "companiesDrive": companiesDrive,
-            "ticketsDrive": ticketsDrive,
-            "accidentsDrive": accidentsDrive,
-         },
-         dataType: "html",
-         beforeSend: function () {
-            $('#sendDrive').addClass('dis')
-            $('#sendDrive').prop("disabled", true)
-         },
-         success: function (data) {
-            alert(data);
-            $('#sendDrive').removeClass('dis')
-            $('#sendDrive').prop("disabled", false)
-         }
-      });
+      if (phonesInput.length < 8) {
+         $('#phone_office').addClass('input__forms-val_error');
+      } else {
+         $('#phone_office').removeClass('input__forms-val_error');
+      }
+
+
+      if (emailTest()) {
+         $('#mail_office').addClass('input__forms-val_error');
+      } else {
+         $('#mail_office').removeClass('input__forms-val_error');
+      };
+
+
+      function emailTest() {
+         return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(mailsInput)
+      }
+
+      const errorVars = document.querySelectorAll('.input__forms-val_error')
+
+
+      if (errorVars.length <= 0) {
+         window.location.reload();
+      }
    });
 
-
-
-
-   //! intro__form
-
-   // $(".step").click(function (e) {
-   //    e.preventDefault();
-   //    let firstIntro = $("#firstName-intro").val().trim();
-   //    let lastNameIntro = $("#lastName-intro").val().trim();
-   //    let mailIntro = $("#mail-intro").val().trim();
-   //    let telIntro = $("#tel-intro").val().trim();
-
-
-
-   // });
-
-
-
-
-
-
-
-   // let stateIntro = $('#stateInput')[0]
-
-
-   // let firstIntro = $('#firstName-intro')[0]
-   // let lastNameIntro = $('#lastName-intro')[0]
-   // let mailIntro = $('#mail-intro')[0]
-   // let introAccept = $('.intro__accept')[0]
-   // let accept = $('.active')[0]
-
-   // $(".btn-intro").click(function (e) {
-   //    e.preventDefault();
-   //    if (firstIntro.value.length >= 2 && lastNameIntro.value.length >= 2 && mailIntro.value.length >= 2) {
-   //       $(".btn-intro").attr('href', "#popup");
-   //    }
-   //    else {
-   //       alert("Заполните все поля")
-   //    }
-   // });
-
-
-
-
-
-   // let introForm = $('.intro__form');
-
-   // $(introForm).submit(formSend(e));
-
-   // async function formSend(e) {
-   //    e.preventDefault();
-
-   //    let error = formValiadate(introForm)
-   // }
-
-
-   // function formValiadate(introForm) {
-   //    let error = 0;
-   //    let formReq = $('._req')
-
-   //    for (let index = 0; index < formReq.length; index++) {
-   //       const input = formReq[index];
-
-   //       formRemoveError(input);
-
-   //       if (input.classList.contains('_email')) {
-
-   //       }
-
-   //    }
-   // }
-
-   // function formAddError(input) {
-   //    input.parentElement.classList.add('_error')
-   //    input.classList.add('_error')
-   // }
-
-   // function formRemoveError(input) {
-   //    input.parentElement.classList.remove('_error')
-   //    input.classList.remove('_error')
-   // }
 });
