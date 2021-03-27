@@ -202,38 +202,42 @@
                   </div>
 
                   <div class="page__contact col-sm-12 col-lg-6">
-                     <form action="#" method="POST">
+                     <form action="#">
                         <div class="row">
                            <div class="page__block col-md-6">
                               <div class="page__block-input">
-                                 <input class="page__block-inputs" name="name-contact" type="text" placeholder="Your Full Name">
+                                 <input class="page__block-inputs" required id="contact_name" name="name-contact" type="text"
+                                    placeholder="Your Full Name*">
                               </div>
 
                               <div class="page__block-input">
-                                 <input class="page__block-inputs" name="email-contact" placeholder="Your e-mail" type="email">
+                                 <input class="page__block-inputs" required id="contact_mail" name="email-contact" placeholder="Your e-mail*"
+                                    type="email">
                               </div>
                            </div>
 
                            <div class="page__block col-md-6">
                               <div class="page__block-input">
-                                 <input class="page__block-inputs" name="phone-contact" placeholder="Your Telephone" type="tel">
+                                 <input class="page__block-inputs" required id="contact_phone" name="phone-contact" placeholder="Your Telephone*"
+                                    type="tel">
                               </div>
 
                               <div class="page__block-input">
-                                 <input class="page__block-inputs" name="subject-contact" placeholder="Subject" type="text">
+                                 <input class="page__block-inputs" required id="contactSub" name="subject-contact" placeholder="Subject*" type="text">
                               </div>
                            </div>
 
                            <div class="page__block mt-2 col-12">
                               <div class="page__block-input">
-                                 <textarea placeholder="Your e-mail" class="col-12 page__block-message" name="message-contact"
+                                 <textarea placeholder="Your message" class="col-12 page__block-message" name="message-contact"
                                     id="message-contact"></textarea>
                               </div>
                            </div>
 
                            <div class="page-contact-accept d-flex flex-column w-100 pl-3">
                               <div class="page__block-input">
-                                 <button type="button" class="button btn-short btn-mini btn-long btn-orange">Send a message</button>
+                                 <button type="button" id="sendContcat" class="button btn-short btn-mini btn-long btn-orange">Send a
+                                    message</button>
                               </div>
                            </div>
                         </div>
@@ -264,7 +268,7 @@
                      </div>
                   </div>
                   <div class="call-button btn-call">
-                     <button type="button" class="button btn-short">CONTACT US</button>
+                     <button type="button" id="contact_send" class="button btn-short">CONTACT US</button>
                   </div>
                </div>
             </div>
@@ -421,9 +425,11 @@
    </div>
 
 
-   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <script src="js/popup.js"></script>
    <script src="js/scrollSmooth.js"></script>
+   <script src="js/mask.js"></script>
+   <script src="js/forms.min.js"></script>
    <script src="js/script.min.js"></script>
 </body>
 
