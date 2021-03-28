@@ -566,6 +566,7 @@ h6 {
   padding-right: 20px;
 }
 
+
 .marathons__info h3 {
   color: #6a7289;
   font-family: "Poppins", Sans-serif;
@@ -683,8 +684,12 @@ h6 {
 .shop__block-top {
   position: relative;
   z-index: 2;
-  width: 265px;
-  height: 265px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
 }
 
 .shop__block-top img {
@@ -714,13 +719,15 @@ h6 {
   width: 70px;
   min-width: 0;
   position: absolute;
-  top: 95px;
-  left: 95px;
   height: 70px;
   background-color: #ff623f;
   border-radius: 50%;
   opacity: 0;
   visibility: hidden;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
 }
 
 .running__block__buttons {
@@ -733,7 +740,7 @@ h6 {
 }
 
 .shop__block-text {
-  text-align: left;
+  text-align: center;
 }
 
 .shop {
@@ -1328,6 +1335,17 @@ html {
   color: #555b6d;
 }
 
+.nav-link.scrolled-1 {
+  color: #ff623f !important;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.nav-link.scrolled-1:hover {
+  color: #d33b19 !important;
+}
+
 .nav-link.scrolled {
   color: #ff623f !important;
   -webkit-transition: 0.3s;
@@ -1337,6 +1355,10 @@ html {
 
 .nav-link.scrolled:hover {
   color: #d33b19 !important;
+}
+
+.nav-link.scrolled-2:hover {
+  color: #bbbbbb !important;
 }
 
 .nav-link.scrolled-3 {
@@ -1350,27 +1372,7 @@ html {
   color: #d33b19 !important;
 }
 
-.nav-link.scrolled-4 {
-  color: #fff !important;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
 
-.nav-link.scrolled-4:hover {
-  color: #cccccc !important;
-}
-
-.nav-link.scrolled-2 {
-  color: #fff !important;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.nav-link.scrolled-2:hover {
-  color: #cccccc !important;
-}
 
 @media (max-width: 1210px) {
   .faq-reverse-text {
@@ -1582,14 +1584,6 @@ html {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-
-  .shop__block {
-    margin-right: 25px !important;
-  }
-
-  .shop__block-top {
-    width: 100%;
   }
 
   .shop__block-top img {
