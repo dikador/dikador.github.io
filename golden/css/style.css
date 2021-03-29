@@ -119,10 +119,6 @@ body {
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .container {
   max-width: 940px;
   width: 100%;
@@ -167,7 +163,7 @@ p {
 }
 
 .header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 1000;
   padding: 38px 20px 0px 20px;
@@ -835,6 +831,10 @@ p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.nav-link.sect1 {
+  color: #222222;
 }
 
 .footer-social {

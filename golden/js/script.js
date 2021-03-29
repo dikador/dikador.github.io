@@ -7,3 +7,4 @@ function openBurger() {
     document.querySelector(".header__burger").classList.toggle("burger-open")
     document.querySelector(".nav").classList.toggle("burger-open")
 }
+
