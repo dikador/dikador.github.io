@@ -62,10 +62,9 @@ function bodyLock() {
     if (lockPadding.length > 0) {
         for (let index = 0; index < lockPadding.length; index++) {
             const element = lockPadding[index];
-            element.getElementsByClassName.paddingRight = lockPaddingValue
+            element.style.paddingRight = lockPaddingValue
         }
     }
-
     body.style.paddingRight = lockPaddingValue;
     body.classList.add('lock');
 
@@ -90,6 +89,7 @@ function bodyUnLock() {
         unlock = true;
     }, timeout);
 }
+
 
 (function () {
     if (!Element.prototype.closest) {

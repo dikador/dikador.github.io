@@ -4870,6 +4870,11 @@ body.lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  cursor: pointer;
+}
+
+.check-accept_1-text {
+  cursor: pointer;
 }
 
 .intro__accept p {
@@ -15408,5 +15413,91 @@ body {
 }
 
 .checkbox__quad-val_error {
-  color: red;
+  color: red !important;
+}
+
+.btn-intro_step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn-intro_step:hover {
+  color: #fff !important;
+}
+
+.btn_intro-send {
+  margin-top: 10px;
+}
+
+.check__send-text {
+  margin-top: 20px;
+}
+
+.driving__intro {
+  margin-top: 10px;
+}
+
+.accept__cheched {
+  margin-top: 20px;
+}
+
+.intro__form-input:focus {
+  box-shadow:0px 0px 8px 8px rgba(0, 0, 0, 0.15)inset;
+}
+
+.cor__mail {
+  position: relative;
+  
+  opacity: 0;
+  transition: 0.2s;
+  visibility: hidden;
+}
+
+.cor__mail.cor_visible {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.2s;
+}
+
+.cor__mail::before {
+  position: absolute;
+  content: "Please enter correct Email";
+
+  top: 5px;
+  left: -163px;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #303030;
+
+  transform: translate(-50%, 0);
+  z-index: 100;
+  border-right: 15px;
+}
+
+.cor__mail::after {
+  content: "";
+
+  position: absolute;
+  top: 5px;
+  left: -50px;
+  z-index: 1000;
+
+
+  border-bottom: 19px solid transparent;
+  border-left: 35px solid #303030;
+  border-top: 19px solid transparent;
+}
+
+#form-popup {
+  position: relative;
 }

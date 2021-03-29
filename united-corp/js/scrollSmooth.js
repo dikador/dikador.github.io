@@ -1,5 +1,5 @@
 $(document).ready(function () {
-   $('a[href^="#"').on('click', function () {
+   $('a[href^="#"').not('.btn-intro_step').on('click', function () {
 
       let href = $(this).attr('href');
 

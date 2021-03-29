@@ -2,7 +2,7 @@ $(document).ready(function () {
    $("#phoneDrive").mask("+3 (999) 999-9999");
    $("#phone_office").mask("+3 (999) 999-9999");
    $("#contact_phone").mask("+3 (999) 999-9999");
-
+   $("#tel-intro").mask("+3 (999) 999-9999");
 
 
    $('#sendDrive').click(function (e) {
@@ -135,6 +135,113 @@ $(document).ready(function () {
          window.location.reload();
       }
    });
+
+
+   $('#introNext').click(function (e) {
+      e.preventDefault();
+      let nameintroInput = $('#firstName_intro').val().trim();
+      let lastintroInput = $('#lastName_intro').val().trim();
+      let phoneintroInput = $('#tel-intro').val().trim();
+
+      let mailintroInput = $('#mail_intro').val().trim();
+
+      if (nameintroInput.length < 2) {
+         $('#firstName_intro').addClass('input__forms-val_error');
+      } else {
+         $('#firstName_intro').removeClass('input__forms-val_error');
+      }
+
+      if (lastintroInput.length < 3) {
+         $('#lastName_intro').addClass('input__forms-val_error');
+      } else {
+         $('#lastName_intro').removeClass('input__forms-val_error');
+      }
+
+
+      if (phoneintroInput.length < 8) {
+         $('#tel-intro').addClass('input__forms-val_error');
+      } else {
+         $('#tel-intro').removeClass('input__forms-val_error');
+      }
+
+
+      if (emailTest()) {
+         $('#correct_email_intro').addClass('cor_visible');
+         $('#mail_intro').addClass('input__forms-val_error');
+      } else {
+         $('#correct_email_intro').removeClass('cor_visible');
+         $('#mail_intro').removeClass('input__forms-val_error');
+      };
+
+
+      let checkedAcceptquad = $('#check-1')[0]
+
+      if (checkedAcceptquad.checked) {
+         $('.check-accept_1-text').removeClass('checkbox__quad-val_error');
+      } else {
+         $('.check-accept_1-text').addClass('checkbox__quad-val_error');
+      }
+
+
+      function emailTest() {
+         return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(mailintroInput)
+      }
+
+      const errorVarcontact = document.querySelectorAll('.input__forms-val_error')
+      const errorVarCheckbox = document.querySelectorAll('.checkbox__quad-val_error')
+
+      if (errorVarcontact.length <= 0 && errorVarCheckbox.length <= 0) {
+         $('.btn-intro_step').attr('href', '#popup');
+         document.querySelector('#introNext').click()
+      } else {
+         $('.btn-intro_step').attr('href', '#');
+      }
+   });
+
+   $('#sendIntro_work').click(function (e) {
+      e.preventDefault();
+      let stateintroInput = $('#state_send_intro').val().trim();
+      let drivingintroInput = $('#driving_send_intro').val().trim();
+
+
+      if (stateintroInput.length < 2) {
+         $('#state_send_intro').addClass('input__forms-val_error');
+      } else {
+         $('#state_send_intro').removeClass('input__forms-val_error');
+      }
+
+      if (drivingintroInput.length < 3) {
+         $('#driving_send_intro').addClass('input__forms-val_error');
+      } else {
+         $('#driving_send_intro').removeClass('input__forms-val_error');
+      }
+
+
+      let checkedAcceptintro = $('#check-2')[0]
+
+      if (checkedAcceptintro.checked) {
+         $('.check-accept_1-text').removeClass('checkbox__quad-val_error');
+      } else {
+         $('.check-accept_1-text').addClass('checkbox__quad-val_error');
+      }
+
+      let checkedAcceptedintro = $('#check-ac')[0]
+
+      if (checkedAcceptedintro.checked) {
+         $('.check-text').removeClass('checkbox__quad-val_error');
+      } else {
+         $('.check-text').addClass('checkbox__quad-val_error');
+      }
+
+
+      const errorVarsend = document.querySelectorAll('.input__forms-val_error')
+      const errorVarsendCheckbox = document.querySelectorAll('.checkbox__quad-val_error')
+
+      if (errorVarsend.length <= 0 && errorVarsendCheckbox.length <= 0) {
+         window.location.reload();
+      }
+   });
+
 });
 
 
