@@ -24,7 +24,7 @@ $(document).ready(function () {
       const errorVar = document.querySelectorAll('.input__forms-val_error')
 
       if (errorVar.length <= 0) {
-         $('.form-val')[0].reset()
+         window.location.reload()
       }
    });
 
