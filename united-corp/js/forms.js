@@ -220,17 +220,17 @@ $(document).ready(function () {
       let checkedAcceptintro = $('#check-2')[0]
 
       if (checkedAcceptintro.checked) {
-         $('.check-accept_1-text').removeClass('checkbox__quad-val_error');
+         $('.accept__check-2').removeClass('checkbox__quad-val_error');
       } else {
-         $('.check-accept_1-text').addClass('checkbox__quad-val_error');
+         $('.accept__check-2').addClass('checkbox__quad-val_error');
       }
 
       let checkedAcceptedintro = $('#check-ac')[0]
 
       if (checkedAcceptedintro.checked) {
-         $('.check-text').removeClass('checkbox__quad-val_error');
+         $('.text__checked').removeClass('checkbox__quad-val_error');
       } else {
-         $('.check-text').addClass('checkbox__quad-val_error');
+         $('.text__checked').addClass('checkbox__quad-val_error');
       }
 
 
