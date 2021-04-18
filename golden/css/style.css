@@ -207,6 +207,11 @@ p {
   align-items: center;
 }
 
+.btn-intro {
+  display: block;
+  max-width: 245px;
+}
+
 .nav-link {
   color: #ffffff;
   text-transform: uppercase;
@@ -250,6 +255,7 @@ p {
 
 .intro__inner {
   padding-top: 100px;
+  align-items: center;
   position: relative;
   height: 100vh;
   display: -webkit-box;
