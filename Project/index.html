@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <title>your logo</title>
+    <title>Logo</title>
 </head>
 
 <body>
@@ -20,21 +20,38 @@
                     </picture>
                 </a>
 
-                <nav class="nav">
+                <nav>
                     <div class="wrapper__nav">
-                        <a class="nav__link" href="#">Home</a>
-                        <a class="nav__link" href="#about">About</a>
-                        <a class="nav__link" href="#services">Servicing</a>
-                        <a class="nav__link" href="#work">Portfolio</a>
-                        <a class="nav__link" href="#blog">Blog</a>
-                        <a class="nav__link" href="#contact">Contact us</a>
+                        <ul class="nav">
+                            <li class="nav__link">
+                                <a href="#">Home</a>
+                            </li>
+                            <li class="nav__link">
+                                <a href="#about">About</a>
+                            </li>
+                            <li class="nav__link">
+                                <a href="#services">Servicing</a>
+                            </li>
+
+                            <li class="nav__link">
+                                <a href="#work">Portfolio</a>
+                            </li>
+
+                            <li class="nav__link">
+                                <a href="#blog">Blog</a>
+                            </li>
+
+                            <li class="nav__link">
+                                <a href="#contact">Contact us</a>
+                            </li>
+                        </ul>
                     </div>
                 </nav>
 
                 <div class="shearches">
                     <input class="nav__shearch" type="text" placeholder="shearch">
                     <picture>
-                        <source srcset="img/.webp" type="image/webp"><img class="nav__shearchs" src="img/.png" alt="">
+                        <source srcset="img/sc.webp" type="image/webp"><img class="nav__shearchs" src="img/sc.png" alt="">
                     </picture>
                 </div>
                 <div class="header__burger">
@@ -51,8 +68,8 @@
         <h2 class="intro__subtitle">Very suitable to support all web development projects</h2>
 
         <div class="intro__button">
-            <a href=""><button class="button btn--transparent" type="submit">OUR SERVICES</button></a>
-            <a href=""><button class="button btn--green" type="submit">HIRE IS NOW</button></a>
+            <a href="" class="button btn--transparent" type="submit">OUR SERVICES</a>
+            <a href="" class="button btn--green" type="submit">HIRE IS NOW</a>
         </div>
         <a href="#about">
             <picture>
@@ -134,7 +151,7 @@
                         blanditiis
                         praesentium voluptatum
                         iti atque corrupti quos.</p>
-                    <a href=""><button class="button btn--more" type="submit">READ MORE</button></a>
+                    <a href="" class="button btn--more" type="submit">READ MORE</a>
                 </div>
 
                 <div class="services__block">
@@ -150,7 +167,7 @@
                         blanditiis
                         praesentium voluptatum
                         iti atque corrupti quos.</p>
-                    <a href=""><button class="button btn--more" type="submit">READ MORE</button></a>
+                    <a href="" class="button btn--more" type="submit">READ MORE</a>
                 </div>
 
                 <div class="services__block">
@@ -166,7 +183,7 @@
                         blanditiis
                         praesentium voluptatum
                         iti atque corrupti quos.</p>
-                    <a href=""><button class="button btn--more" type="submit">READ MORE</button></a>
+                    <a href="" class="button btn--more" type="submit">READ MORE</a>
                 </div>
                 <div class="services__block services__block_margin">
                     <picture>
@@ -181,7 +198,7 @@
                         blanditiis
                         praesentium voluptatum
                         iti atque corrupti quos.</p>
-                    <a href=""><button class="button btn--more" type="submit">READ MORE</button></a>
+                    <a href="" class="button btn--more" type="submit">READ MORE</a>
                 </div>
                 <div class="services__block services__block_margin">
                     <picture>
@@ -196,7 +213,7 @@
                         blanditiis
                         praesentium voluptatum
                         iti atque corrupti quos.</p>
-                    <a href=""><button class="button btn--more" type="submit">READ MORE</button></a>
+                    <a href="" class="button btn--more" type="submit">READ MORE</a>
                 </div>
                 <div class="services__block services__block_margin">
                     <picture>
@@ -211,7 +228,7 @@
                         blanditiis
                         praesentium voluptatum
                         iti atque corrupti quos.</p>
-                    <a href=""><button class="button btn--more" type="submit">READ MORE</button></a>
+                    <a href="" class="button btn--more" type="submit">READ MORE</a>
                 </div>
             </div>
         </div>
@@ -1066,7 +1083,7 @@
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
             </div>
 
-            <form action="">
+            <form action="#">
                 <div class="contact__data">
                     <div class="contact__data__block">
                         <picture>
@@ -1100,8 +1117,7 @@
                 <form class="form-val" action="#" method="POST">
                     <input required id="Name" class="contact__input" name="name" type="text" placeholder="Your NAME">
                     <input required id="mail" class="contact__input" name="mail" type="email" placeholder="Your Email">
-                    <textarea id="message" class="contact__input input__lang" cols="30" rows="1" name="mail" type="email"
-                        placeholder="Write Massage"></textarea>
+                    <textarea id="message" class="contact__input input__lang" name="mail" placeholder="Write Massage"></textarea>
                     <div class="contact__button">
                         <button type="submit" class="button btn--white">SEND</button>
                     </div>

@@ -170,6 +170,10 @@ h2 {
   height: 55px;
 }
 
+.button {
+  display: block;
+}
+
 .nav {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -178,18 +182,25 @@ h2 {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  justify-content: center;
   margin-left: 60px;
 }
 
 .nav__link {
-  color: #212121;
-  font-family: "Open Sans";
-  font-size: 20px;
-  font-weight: 400;
   margin-left: 45px;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
+}
+
+.nav__link a {
+  font-weight: 400;
+  font-family: "Open Sans";
+  font-size: 20px;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  color: #212121;
 }
 
 .nav__link:first-child {
