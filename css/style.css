@@ -237,7 +237,11 @@ p {
   margin-right: 36px;
 }
 
-.nav .nav-link:hover {
+.nav .nav-link a {
+  color: #ffffff;
+}
+
+.nav .nav-link:hover a {
   color: #e6e6e6;
   text-decoration: underline;
 }
@@ -2037,10 +2041,10 @@ p {
   top: -100px;
   transition: 0.7s ease-in-out;
   transform: rotateX(-60deg);
-	transform-origin: 50% 15% 0px;
+  transform-origin: 50% 15% 0px;
 }
 
-.popup.open .popup__content{
+.popup.open .popup__content {
   top: 0px;
   transform: rotateX(0deg);
   transition: 0.7s ease;
@@ -2086,13 +2090,16 @@ p {
   transition: 0.3s;
 }
 
-.scrolled .nav-link {
+.scrolled .nav-link a {
   color: #3b87c2;
   font-weight: 700;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.scrolled .nav-link:hover {
-  padding: 11px 22px 10px 22px;
+.scrolled .nav-link:hover a {
+  padding: 13px 22px 12px 22px;
   border-radius: 10px;
   color: #ffffff;
   -webkit-transition: 0.3s;
