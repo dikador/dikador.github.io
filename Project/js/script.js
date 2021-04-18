@@ -29,8 +29,6 @@ let burger = document.querySelector('.header__burger').addEventListener('click',
     document.querySelector('.nav').classList.toggle('active__burger')
 })
 
-
-
 // more view
 
 function viewButton() {

@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-   $('.button').click(function (e) {
+   $('#sendForm').click(function (e) {
       e.preventDefault()
       let nameInput = $('#Name').val().trim();
 
