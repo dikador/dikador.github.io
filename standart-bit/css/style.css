@@ -229,6 +229,14 @@ p {
   width: 100%;
   padding-top: 32px;
   z-index: 1000;
+  padding-bottom: 32px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header.sect1 {
+  background-color: #303030;
 }
 
 .header__inner {
