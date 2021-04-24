@@ -1,31 +1,30 @@
-$(document).ready(function () {
-   jQuery('img.svg').each(function () {
-      var $img = jQuery(this);
-      var imgID = $img.attr('id');
-      var imgClass = $img.attr('class');
-      var imgURL = $img.attr('src');
+document.querySelectorAll('img.svg').forEach(img => {
+   var imgId = img.id;
+   var imgClass = img.className;
+   var imgURL = img.src;
+   var imgFill = img.getAttribute('data-fill');
 
-      jQuery.get(imgURL, function (data) {
-         // Get the SVG tag, ignore the rest
-         var $svg = jQuery(data).find('svg');
+   fetch(imgURL).then(r => r.text()).then(text => {
+      var parser = new DOMParser();
+      var xmlDoc = parser.parseFromString(text, "text/xml");
+      var svg = xmlDoc.getElementsByTagName('svg')[0];
 
-         // Add replaced image's ID to the new SVG
-         if (typeof imgID !== 'undefined') {
-            $svg = $svg.attr('id', imgID);
-         }
-         // Add replaced image's classes to the new SVG
-         if (typeof imgClass !== 'undefined') {
-            $svg = $svg.attr('class', imgClass + ' replaced-svg');
-         }
+      if (typeof imgId !== 'undefined') {
+         svg.setAttribute('id', imgId);
+      }
 
-         // Remove any invalid XML tags as per http://validator.w3.org
-         $svg = $svg.removeAttr('xmlns:a');
+      if (typeof imgClass !== 'undefined') {
+         svg.setAttribute('class', imgClass);
+      }
 
-         // Replace image with new SVG
-         $img.replaceWith($svg);
+      if (typeof imgFill !== 'undefined') {
+         svg.setAttribute('fill', imgFill);
+      }
 
-      }, 'xml');
-   });
+      img.parentNode.replaceChild(svg, img);
+
+   }).catch(console.error);
+
 });
 
 const acord_item = document.querySelectorAll('.header__drop');
