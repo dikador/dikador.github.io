@@ -1,30 +1,20 @@
-document.querySelectorAll('img.svg').forEach(img => {
-   var imgId = img.id;
-   var imgClass = img.className;
-   var imgURL = img.src;
-   var imgFill = img.getAttribute('data-fill');
-
-   fetch(imgURL).then(r => r.text()).then(text => {
-      var parser = new DOMParser();
-      var xmlDoc = parser.parseFromString(text, "text/xml");
-      var svg = xmlDoc.getElementsByTagName('svg')[0];
-
-      if (typeof imgId !== 'undefined') {
-         svg.setAttribute('id', imgId);
-      }
-
-      if (typeof imgClass !== 'undefined') {
-         svg.setAttribute('class', imgClass);
-      }
-
-      if (typeof imgFill !== 'undefined') {
-         svg.setAttribute('fill', imgFill);
-      }
-
-      img.parentNode.replaceChild(svg, img);
-
-   }).catch(console.error);
-
+$(document).ready(function () {
+   $('img.svg').each(function () {
+      var $img = $(this);
+      var imgClass = $img.attr('class');
+      var imgURL = $img.attr('src');
+      $.get(imgURL, function (data) {
+         var $svg = $(data).find('svg');
+         if (typeof imgClass !== 'undefined') {
+            $svg = $svg.attr('class', imgClass + ' replaced-svg');
+         }
+         $svg = $svg.removeAttr('xmlns:a');
+         if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+            $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+         }
+         $img.replaceWith($svg);
+      }, 'xml');
+   });
 });
 
 const acord_item = document.querySelectorAll('.header__drop');
