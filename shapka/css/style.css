@@ -814,7 +814,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 250px;
 }
 
 .search-item {
@@ -863,6 +863,7 @@ body {
   background-clip: padding-box;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
+  width: 100%;
 }
 
 .header__last-img {
@@ -1032,8 +1033,8 @@ body {
     padding-left: 15px !important;
   }
 
-  .drop-form {
-    width: 170px;
+  .drops-form {
+    width: 200px;
   }
 
   .header__left-body {
@@ -1042,7 +1043,7 @@ body {
 }
 
 @media (max-width: 500px) {
-  .drop-form {
+  .drops-form {
     width: 150px;
   }
 
@@ -1067,8 +1068,8 @@ body {
 }
 
 @media (max-width: 450px) {
-  .drop-form {
-    width: 100px;
+  .drops-form {
+    width: 0px;
   }
 }
 
