@@ -7580,23 +7580,20 @@ a.text-dark:focus {
   overflow-y: auto;
 }
 
-.dorpdowns-menu * {
+.dorpdowns-menu {
   scrollbar-width: thin;
   scrollbar-color: #adaca7 transparent;
 }
 
-*::-webkit-scrollbar,
 .dorpdowns-menu *::-webkit-scrollbar {
   height: 100px;
   width: 4px;
 }
 
-*::-webkit-scrollbar-track,
 .dorpdowns-menu *::-webkit-scrollbar-track {
   background: transparent;
 }
 
-*::-webkit-scrollbar-thumb,
 .dorpdowns-menu *::-webkit-scrollbar-thumb {
   background-color: #9d9c96;
   border-radius: 5px;
