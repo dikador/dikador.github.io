@@ -1,5 +1,5 @@
 $(document).ready(function () {
-   $('img.svg').each(function () {
+   $('img.img-svg').each(function () {
       var $img = $(this);
       var imgClass = $img.attr('class');
       var imgURL = $img.attr('src');
@@ -15,7 +15,10 @@ $(document).ready(function () {
          $img.replaceWith($svg);
       }, 'xml');
    });
+
 });
+
+
 
 const acord_item = document.querySelectorAll('.header__drop');
 
