@@ -908,6 +908,24 @@ p {
   padding: 69px 0px 110px 0px;
 }
 
+.scrolled .nav-link a {
+  color: #3b87c2;
+  font-weight: 700;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.scrolled .nav-link:hover a {
+  padding: 13px 22px 12px 22px;
+  border-radius: 10px;
+  color: #ffffff;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #479ee1;
+}
+
 .subscribe .subscribe__input {
   max-width: 370px;
   margin: 0 auto;
@@ -1318,7 +1336,13 @@ p {
     margin-right: 0px;
     font-size: 22px;
     margin-top: 25px;
+    font-weight: 600 !important;
     color: #fff !important;
+  }
+
+  .nav-link a {
+    color: #fff !important;
+    font-weight: 600 !important;
   }
 
   .nav .nav-login {
@@ -2103,22 +2127,4 @@ p {
 .scrolled .header__inner {
   border-bottom: 1px solid rgba(28, 102, 199, 0.6);
   transition: 0.3s;
-}
-
-.scrolled .nav-link a {
-  color: #3b87c2;
-  font-weight: 700;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.scrolled .nav-link:hover a {
-  padding: 13px 22px 12px 22px;
-  border-radius: 10px;
-  color: #ffffff;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  background-color: #479ee1;
 }
