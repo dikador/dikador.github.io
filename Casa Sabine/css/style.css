@@ -1953,6 +1953,10 @@ body.lock {
   font-weight: 700;
 }
 
+.lists {
+  margin-top: 10px;
+}
+
 .main-block {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
