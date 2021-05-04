@@ -14,15 +14,43 @@ plus.addEventListener('click', () => {
    if (+person.value <= 1) {
       person.value = 1;
    }
+
+   if (+person.value >= 2) {
+      minus.classList.add('orange')
+   }
+
 })
 
 minus.addEventListener('click', () => {
    person.value--;
 
+   if (+person.value >= 2) {
+      minus.classList.add('orange')
+   } else {
+      minus.classList.remove('orange')
+
+   }
+
    if (+person.value < 1) {
       person.value = 1;
    }
 })
+
+
+
+window.addEventListener('scroll', () => {
+   let navTop = window.pageYOffset;
+
+   let sec1 = document.querySelector('#about').getBoundingClientRect().top + 700;
+
+   if (navTop > sec1) {
+      document.querySelector('.header').classList.add('sect1');
+   } else {
+      document.querySelector('.header').classList.remove('sect1');
+   }
+})
+
+
 
 $(document).ready(function () {
    $('.reviews__inner').slick({
@@ -51,12 +79,35 @@ $(document).ready(function () {
          },
       ]
    })
+
+   $('.about__right').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+
+      responsive: [
+         {
+            breakpoint: 9999,
+            settings: "unslick"
+         },
+
+         {
+            breakpoint: 576,
+            settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1,
+               dots: true
+            }
+         },
+      ]
+   })
 });
 
-// var input = document.getElementById('#date');
-// var datepicker = new HotelDatepicker(input);
+$('.fotorama').fotorama({});
 
-// var hdpkr = new HotelDatepicker(document.getElementById('#date'),);
+
+
 
 var input = document.querySelector('#date');
 var datepicker = new HotelDatepicker(input);
