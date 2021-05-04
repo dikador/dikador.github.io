@@ -1248,6 +1248,7 @@ body.lock {
 .fotorama__arr--prev {
   background: url(../img/chevron-right.svg) center no-repeat;
   opacity: 1 !important;
+  left: -90px !important;
   -webkit-transform: translate3d(0px, 0, 0) !important;
           transform: translate3d(0px, 0, 0) !important;
   background-color: #e97000;
@@ -1259,6 +1260,7 @@ body.lock {
   background-color: #e97000;
   -webkit-transform: translate3d(0px, 0, 0) !important;
           transform: translate3d(0px, 0, 0) !important;
+  right: -90px !important;
 }
 
 .fotorama__nav,
@@ -2181,10 +2183,35 @@ body.active {
   }
 }
 
+@media (max-width: 1340px) {
+  .fotorama__arr--prev {
+    left: -30px !important;
+  }
+
+  .fotorama__arr--next {
+    right: -30px !important;
+  }
+}
+
 @media (max-width: 1300px) {
   .reviews__inner .slick-list {
     overflow: hidden;
     padding: 0px 10%;
+  }
+}
+
+@media (max-width: 1220px) {
+  .fotorama__arr {
+    width: 50px;
+    height: 50px;
+  }
+
+  .fotorama__arr--prev {
+    left: -10px !important;
+  }
+
+  .fotorama__arr--next {
+    right: -10px !important;
   }
 }
 
@@ -2597,6 +2624,48 @@ body.active {
   }
 
   .fotorama__nav.fotorama__nav--thumbs {
+    background: none;
+  }
+
+  .fotorama__nav.fotorama__nav--thumbs:last-child {
+    margin-right: 0;
+  }
+
+  .fotorama__nav.fotorama__nav--thumbs img {
+    display: none;
+  }
+
+  .fotorama__nav {
+    bottom: -30px;
+  }
+
+  .fotorama__thumb {
+    background: none;
+  }
+
+  .fotorama__nav__frame.fotorama__nav__frame--thumb {
+    background: #ebebeb;
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50%;
+    padding: 0 !important;
+    margin-right: 12px;
+  }
+
+  .fotorama__nav__frame.fotorama__nav__frame--thumb:last-child {
+    margin-right: 0;
+  }
+
+  .fotorama__nav__frame.fotorama__nav__frame--thumb.fotorama__active {
+    background: #e97000;
+  }
+
+  .fotorama__thumb-border {
+    width: 10px !important;
+    height: 10px !important;
+    margin: 0 !important;
+    background: #e97000;
+    border-radius: 50% !important;
     display: none;
   }
 
@@ -2622,6 +2691,10 @@ body.active {
     -webkit-box-align: start !important;
         -ms-flex-align: start !important;
             align-items: start !important;
+  }
+
+  .footer__connection-item {
+    margin-top: 20px;
   }
 
   .social {
@@ -2796,6 +2869,11 @@ body.active {
 
   .tabs-nav li {
     margin-right: 20px;
+  }
+
+  .date-input {
+    font-size: 13px;
+    padding-left: 20px;
   }
 }
 

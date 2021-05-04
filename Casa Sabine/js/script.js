@@ -41,13 +41,15 @@ minus.addEventListener('click', () => {
 window.addEventListener('scroll', () => {
    let navTop = window.pageYOffset;
 
-   let sec1 = document.querySelector('#about').getBoundingClientRect().top + 700;
+   // let sec1 = document.querySelector('#about').getBoundingClientRect().top + 700;
 
-   if (navTop > sec1) {
+   if (navTop > 100) {
       document.querySelector('.header').classList.add('sect1');
    } else {
       document.querySelector('.header').classList.remove('sect1');
    }
+
+
 })
 
 
