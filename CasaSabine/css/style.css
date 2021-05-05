@@ -852,7 +852,7 @@ body.lock {
 .intro {
   width: 100%;
   height: 100vh;
-  background: url(../img/intro_bg.png) center no-repeat;
+  background: url(../img/intro_bg.jpg) center no-repeat;
   background-size: cover;
   background-attachment: fixed;
   display: -webkit-box;
@@ -2708,6 +2708,14 @@ body.active {
 
   .social {
     margin-right: 32px;
+  }
+
+  .reg__inner {
+    padding: 18px 14px 20px 14px !important;
+  }
+
+  .reg__inner h2 {
+    margin-bottom: 0;
   }
 }
 
