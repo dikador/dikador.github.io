@@ -4,6 +4,25 @@ document.querySelector('.header__burger').addEventListener('click', () => {
    document.querySelector('body').classList.toggle('active');
 })
 
+document.querySelectorAll('.smooth-scroll').forEach(link => {
+
+   link.addEventListener('click', function (e) {
+      e.preventDefault();
+      let href = this.getAttribute('href').substring(1);
+
+      const scrollTarget = document.getElementById(href);
+      const topOffset = 0;
+      const elementPosition = scrollTarget.getBoundingClientRect().top;
+      const offsetPosition = elementPosition - topOffset;
+
+      window.scrollBy({
+         top: offsetPosition,
+         behavior: 'smooth'
+      });
+   });
+});
+
+
 const plus = document.querySelector('.plus');
 const minus = document.querySelector('.minus');
 let person = document.querySelector('#person');
@@ -41,7 +60,6 @@ minus.addEventListener('click', () => {
 window.addEventListener('scroll', () => {
    let navTop = window.pageYOffset;
 
-   // let sec1 = document.querySelector('#about').getBoundingClientRect().top + 700;
 
    if (navTop > 100) {
       document.querySelector('.header').classList.add('sect1');
@@ -107,9 +125,6 @@ $(document).ready(function () {
 });
 
 $('.fotorama').fotorama({});
-
-
-
 
 var input = document.querySelector('#date');
 var datepicker = new HotelDatepicker(input);

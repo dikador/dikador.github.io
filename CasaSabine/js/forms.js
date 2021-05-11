@@ -81,6 +81,20 @@ document.querySelector('.btn-form').addEventListener("click", function (e) {
    const errorVar = document.querySelectorAll('.input__forms-val_error')
 
    if (errorVar.length <= 0) {
-      window.location.reload();
+      $.ajax({
+         type: "POST",
+         url: "mail.php",
+         data: {
+            "nameInput": nameInput,
+            "phoneInput": phoneInput,
+            "mailInput": mailInput,
+            "dateInput": dateInput,
+            "messInput": messInput,
+            "personInput": personInput,
+         },
+         success: function (response) {
+            alert("Форма отправилась")
+         }
+      });
    }
 });
