@@ -7,7 +7,7 @@ $messInput = $_POST['messInput'];
 $personInput = $_POST['personInput'];
 
 $fromMail = 'dikador@mail.ru';
-$fromName = 'https://dikador.github.io/CasaSabine/';
+$fromName = 'https://dikador.github.io/';
 
 $emailTo = 'dikador@mail.ru';
 $subject = 'Форма на сайте';
