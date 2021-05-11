@@ -417,6 +417,10 @@ h6 {
   min-width: 0;
 }
 
+.inner-border {
+  border: none;
+}
+
 .history__block {
   opacity: 0.6;
   -webkit-transition: 0.8s;
@@ -599,11 +603,23 @@ h6 {
   background: #343b44;
 }
 
-.footer__copyright div {
+.footer__copyright span {
   font-size: 16px;
   line-height: 22px;
   text-align: center;
   color: #a0a0a0;
+}
+
+.footer__copyright a {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #a0a0a0;
+  text-decoration: underline;
+}
+
+.button {
+  text-decoration: none !important;
 }
 
 .footer-item {
@@ -1149,6 +1165,10 @@ h6 {
   border: 1px solid #f36969;
 }
 
+.input__forms-val_error:focus {
+  border: 1px solid #f36969;
+}
+
 .input__forms-val_error::-webkit-input-placeholder {
   color: #f36969;
 }
@@ -1171,6 +1191,7 @@ h6 {
 
 body {
   font-family: "Open Sans";
+  font-weight: 400;
   overflow-x: hidden;
 }
 
