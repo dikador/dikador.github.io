@@ -82,6 +82,6 @@ document.querySelector('.btn-form').addEventListener("click", function (e) {
    const errorVar = document.querySelectorAll('.input__forms-val_error');
 
    if (errorVar.length <= 0) {
-      window.onload();
+      window.reload();
    }
 });
