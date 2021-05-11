@@ -47,20 +47,21 @@ document.querySelector('.btn-form').addEventListener("click", function (e) {
 
    let mailInput = document.querySelector('#email').value;
 
-   let dateInput = document.querySelector('#date');
+   let dateInput = document.querySelector('#date').value;
 
    let messInput = document.querySelector('#mess').value;
 
-   let personInput = document.querySelector('#person');
+   let personInput = document.querySelector('#person').value;
 
 
-   if (personInput.value.length < 1 || personInput.value <= 0) {
+
+   if (personInput.length < 1 || personInput.value <= 0) {
       document.querySelector('#person').classList.add('input__forms-val_error');
    } else {
       document.querySelector('#person').classList.remove('input__forms-val_error');
    }
 
-   if (+dateInput.value < 1) {
+   if (+dateInput < 1) {
       document.querySelector('#date').classList.add('input__forms-val_error');
    } else {
       document.querySelector('#date').classList.remove('input__forms-val_error');
@@ -78,7 +79,7 @@ document.querySelector('.btn-form').addEventListener("click", function (e) {
       return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(mailInput)
    }
 
-   const errorVar = document.querySelectorAll('.input__forms-val_error')
+   const errorVar = document.querySelectorAll('.input__forms-val_error');
 
    if (errorVar.length <= 0) {
       $.ajax({
