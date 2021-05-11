@@ -84,7 +84,7 @@ document.querySelector('.btn-form').addEventListener("click", function (e) {
    if (errorVar.length <= 0) {
       $.ajax({
          type: "POST",
-         url: "mail.php",
+         url: "js/mail.php",
          data: {
             "nameInput": nameInput,
             "phoneInput": phoneInput,
@@ -94,7 +94,7 @@ document.querySelector('.btn-form').addEventListener("click", function (e) {
             "personInput": personInput,
          },
          success: function (response) {
-            alert("Форма отправилась")
+            alert("Форма отправилась");
          }
       });
    }
