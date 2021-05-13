@@ -930,6 +930,10 @@ h6 {
   margin: 0 auto;
 }
 
+.inner-intro {
+  min-height: 340px;
+}
+
 .test__inner {
   background-color: #fff;
   width: 100%;
@@ -1615,6 +1619,10 @@ a:active {
 
   .test-intro .breadcrumb {
     margin-bottom: 60px;
+  }
+
+  .inner-intro {
+    min-height: auto;
   }
 
   .contact-input {
