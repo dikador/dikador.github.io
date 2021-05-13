@@ -312,6 +312,19 @@ h6 {
   font-weight: 500;
 }
 
+.inner-intro .breadcrumb {
+  margin-bottom: 33px;
+  padding: 0;
+}
+
+.inner-intro .intro__title {
+  margin-bottom: 0;
+}
+
+.inner-intro .contact {
+  margin-bottom: 33px;
+}
+
 .intro__title {
   font-family: "Shippori Mincho";
   font-weight: 600;
@@ -669,7 +682,7 @@ h6 {
 }
 
 .inner-intro {
-  padding-bottom: 40px !important;
+  padding-bottom: 50px !important;
   padding-top: 160px;
 }
 
@@ -743,6 +756,7 @@ h6 {
 
 .team__block img {
   width: 150px;
+  border-radius: 50%;
   height: 150px;
 }
 
@@ -1509,7 +1523,7 @@ a:active {
 
   .navbar-brand img {
     height: auto;
-    width: 170px;
+    width: 245px;
   }
 
   .navbar-nav {

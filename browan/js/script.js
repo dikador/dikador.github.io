@@ -22,7 +22,6 @@ window.addEventListener('scroll', () => {
 })
 
 
-
 let hb = $('.history__block');
 let hc = $('.history-circle');
 
@@ -76,6 +75,23 @@ $(document).ready(function () {
 
    window.addEventListener('load', () => {
       if ($(window).innerWidth() <= 576) {
+
+         $(hb).each(function (index, element) {
+            $(element).click(function (e) {
+               e.preventDefault();
+               $('.history__inner').slick('slickPrev');
+            });
+
+            $(element).next().click(function (e) {
+               e.preventDefault();
+               if ($(element).next().hasClass('slick-active')) {
+                  $('.history__inner').slick('slickPrev');
+               }
+               $('.history__inner').slick('slickNext');
+            });
+         });
+
+
          $('.history__inner').on('swipe', function (event, slick, direction) {
             $(hb).removeClass('active-history');
             $(hc).removeClass('active-history');
