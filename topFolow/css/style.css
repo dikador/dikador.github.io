@@ -713,6 +713,8 @@ h6 {
 
 .shop__block .btn-circle {
   border-radius: 24.8812px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .shop__block.red__block .shop__block-title {
@@ -731,8 +733,6 @@ h6 {
 .shop__block.purple__block .btn-circle {
   color: #7834be !important;
   border-color: #7834be;
-  -webkit-box-shadow: none;
-          box-shadow: none;
 }
 
 .shop__block.purple__block .btn-red {
@@ -1718,14 +1718,14 @@ body.burger__active {
   }
 
   .use-phone {
-    max-width: 90%;
+    max-width: 100%;
     max-height: 100%;
   }
 
   .new-phone {
-    width: 84.1%;
+    width: 92.7%;
     height: 96.8%;
-    left: 45.3%;
+    left: 50.6%;
   }
 
   .use__arrows {
@@ -1738,7 +1738,7 @@ body.burger__active {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
   .hows-1 {
