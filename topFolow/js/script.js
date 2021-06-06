@@ -76,7 +76,7 @@ $(document).ready(function () {
             settings: "unslick"
          },
          {
-            breakpoint: 768,
+            breakpoint: 767,
             settings: {
                slidesToShow: 1,
                slidesToScroll: 1,
@@ -98,7 +98,7 @@ $(document).ready(function () {
             settings: "unslick"
          },
          {
-            breakpoint: 768,
+            breakpoint: 767,
             settings: {
                slidesToShow: 1,
                slidesToScroll: 1,
@@ -110,8 +110,76 @@ $(document).ready(function () {
    });
 
 
+   let slickD = $('.use__item');
+   $('.slick__dots').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+      $(slickD).each(function (index, element) {
+
+         if (slickD[index].classList.contains('slick-current')) {
+            $(slickD).prev().addClass('hsa');
+         }
+         else if (slickD[index].classList.contains('slick-current') == false) {
+            $(this).prev().removeClass('hsa');
+         }
+
+      });
+   });
+
+
+
 
 });
 
 
 
+// let hb = $('.history__block');
+// let hc = $('.history-circle');
+
+// $(document).ready(function () {
+//    $(hb).bind('touchstart mouseover', function (e) {
+//       $(hb).removeClass('active-history');
+//       $(hc).removeClass('active-history');
+
+//       $(this).addClass('active-history');
+
+//       $(hb).each(function (index, element) {
+//          if (hb[index].classList.contains('active-history')) {
+//             return $(hb).prev().addClass('hsa');
+//          }
+//          else if (hb[index].classList.contains('active-history') == false) {
+//             $(this).prev().removeClass('hsa');
+//          }
+//       });
+//       let thc = $(this).find(hc);
+//       $(thc).addClass('active-history');
+//    });
+
+//    window.addEventListener('load', () => {
+//       if ($(window).innerWidth() <= 576) {
+
+//          $(hb).each(function (index, element) {
+//             $(element).click(function (e) {
+//                e.preventDefault();
+//                $('.history__inner').slick('slickPrev');
+//             });
+
+//             $(element).next().click(function (e) {
+//                e.preventDefault();
+//                if ($(element).next().hasClass('slick-active')) {
+//                   $('.history__inner').slick('slickPrev');
+//                }
+//                $('.history__inner').slick('slickNext');
+//             });
+//          });
+
+
+//          $('.history__inner').on('swipe', function (event, slick, direction) {
+//             $(hb).removeClass('active-history');
+//             $(hc).removeClass('active-history');
+
+//             $('.slick-active').addClass('active-history');
+//             let waf = $('.slick-active').find(hc);
+//             $(waf).addClass('active-history');
+//          });
+//       }
+//    })
+// });
