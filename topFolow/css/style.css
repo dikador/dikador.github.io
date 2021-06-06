@@ -359,6 +359,7 @@ h6 {
   top: 0;
   height: auto;
   max-height: 770px;
+  right: 0;
 }
 
 .intro__images img {
@@ -637,11 +638,11 @@ h6 {
 
 .slick__dots .slick-current img {
   overflow: visible;
-  -webkit-box-shadow: 0px 0px 10px 3px rgba(128, 71, 185, 0.212);
-          box-shadow: 0px 0px 10px 3px rgba(128, 71, 185, 0.212);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(128, 71, 185, 0.212);
+          box-shadow: 0px 0px 10px 5px rgba(128, 71, 185, 0.212);
+  -webkit-transition: 0.7s ease 0.2s;
+  -o-transition: 0.7s ease 0.2s;
+  transition: 0.7s ease 0.2s;
   border-radius: 50%;
 }
 
@@ -1172,6 +1173,12 @@ body.burger__active {
   }
 }
 
+@media (max-width: 1025px) {
+  .lcn {
+    color: #fff;
+  }
+}
+
 @media (max-width: 991px) {
   .header__burger {
     display: block;
@@ -1268,7 +1275,6 @@ body.burger__active {
   }
 
   .right-btn {
-    right: -30px;
     margin-top: 0;
   }
 
