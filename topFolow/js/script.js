@@ -6,8 +6,6 @@ document.querySelector('.header__burger').addEventListener('click', () => {
 
 
 
-
-
 $(document).ready(function () {
    $('.shop').bind('touchstart mouseover', function (e) {
       const x = e.pageX / window.innerWidth;
@@ -17,7 +15,7 @@ $(document).ready(function () {
 
       document.querySelector('.inst').style.transform = 'translate(-' + x * 40 + 'px, -' + y * 20 + 'px)';
 
-      document.querySelector('.hearts_bot').style.transform = 'translate(' + x * 30 + 'px, ' + y * 20 + 'px) rotate(40deg)';
+      document.querySelector('.hearts_bot').style.transform = 'translate(' + x * 30 + 'px, ' + y * 20 + 'px) rotate(20deg)';
 
       document.querySelector('.inst_bot').style.transform = 'translate(-' + x * 25 + 'px, -' + y * 25 + 'px)';
    });
@@ -36,8 +34,6 @@ $(document).ready(function () {
       variableHeight: false,
       fade: true,
       arrows: false,
-      // dots: true,
-      // appendDots: $('.slick__dots'),
       swipe: false,
       autoplay: true,
       asNavFor: '.slick__dots',
@@ -124,62 +120,5 @@ $(document).ready(function () {
       });
    });
 
-
-
-
 });
 
-
-
-// let hb = $('.history__block');
-// let hc = $('.history-circle');
-
-// $(document).ready(function () {
-//    $(hb).bind('touchstart mouseover', function (e) {
-//       $(hb).removeClass('active-history');
-//       $(hc).removeClass('active-history');
-
-//       $(this).addClass('active-history');
-
-//       $(hb).each(function (index, element) {
-//          if (hb[index].classList.contains('active-history')) {
-//             return $(hb).prev().addClass('hsa');
-//          }
-//          else if (hb[index].classList.contains('active-history') == false) {
-//             $(this).prev().removeClass('hsa');
-//          }
-//       });
-//       let thc = $(this).find(hc);
-//       $(thc).addClass('active-history');
-//    });
-
-//    window.addEventListener('load', () => {
-//       if ($(window).innerWidth() <= 576) {
-
-//          $(hb).each(function (index, element) {
-//             $(element).click(function (e) {
-//                e.preventDefault();
-//                $('.history__inner').slick('slickPrev');
-//             });
-
-//             $(element).next().click(function (e) {
-//                e.preventDefault();
-//                if ($(element).next().hasClass('slick-active')) {
-//                   $('.history__inner').slick('slickPrev');
-//                }
-//                $('.history__inner').slick('slickNext');
-//             });
-//          });
-
-
-//          $('.history__inner').on('swipe', function (event, slick, direction) {
-//             $(hb).removeClass('active-history');
-//             $(hc).removeClass('active-history');
-
-//             $('.slick-active').addClass('active-history');
-//             let waf = $('.slick-active').find(hc);
-//             $(waf).addClass('active-history');
-//          });
-//       }
-//    })
-// });

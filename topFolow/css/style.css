@@ -302,7 +302,7 @@ h6 {
   line-height: 1.2em;
   color: #010101;
   max-width: 470px;
-  font-size: calc(18px + 36 * (100vw / 1600));
+  font-size: calc(18px + 36 * (100vw / 1800));
 }
 
 .intro__icon {
@@ -418,6 +418,7 @@ h6 {
 .use {
   margin-top: 194px;
   position: relative;
+  overflow: hidden;
 }
 
 .use .row {
@@ -625,6 +626,7 @@ h6 {
   position: absolute;
   top: -40px;
   right: -50px;
+  width: 15%;
 }
 
 .use__arrows {
@@ -722,11 +724,11 @@ h6 {
 
 .hearts_bot {
   position: absolute;
-  right: 45px;
+  right: 55px;
   bottom: 50px;
-  -webkit-transform: rotate(40deg);
-      -ms-transform: rotate(40deg);
-          transform: rotate(40deg);
+  -webkit-transform: rotate(20deg);
+      -ms-transform: rotate(20deg);
+          transform: rotate(20deg);
 }
 
 .inst_bot {
@@ -1075,11 +1077,21 @@ body.burger__active {
   .intro__images img {
     max-width: 920px;
   }
+
+  .intro__title {
+    font-size: 52px;
+  }
 }
 
 @media (max-width: 1450px) {
   .use {
     margin-top: 154px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .intro__title {
+    font-size: calc(18px + (34 + 34 * 0.7) * ((100vw - 320px) / 1250px)) !important;
   }
 }
 
@@ -1292,10 +1304,6 @@ body.burger__active {
 }
 
 @media (max-width: 767px) {
-  .intro__title {
-    font-size: calc(18px + (34 + 34 * 0.7) * ((100vw - 320px) / 767px));
-  }
-
   .intro {
     background: -o-linear-gradient(50.03deg, #ef2779 0.79%, #7834be 79.29%);
     background: linear-gradient(39.97deg, #ef2779 0.79%, #7834be 79.29%);
