@@ -29,6 +29,35 @@ $(document).ready(function () {
       document.querySelector('.news__teleg-bot').style.transform = 'translate(' + x * 25 + 'px, ' + y * 15 + 'px) rotate(-20deg)';
    });
 
+
+   $('.nav-link').click(function (e) {
+      e.preventDefault();
+      document.querySelector('.header__burger').classList.remove('active');
+      document.querySelector('.navbar-nav').classList.remove('active');
+      document.querySelector('body').classList.remove('burger__active');
+   });
+
+   let navTop = window.pageYOffset;
+
+   $(window).scroll(function () {
+      let navTop = window.pageYOffset;
+
+      if (navTop > 100) {
+         document.querySelector('.header').classList.add('sect1');
+      } else {
+         document.querySelector('.header').classList.remove('sect1');
+      }
+   });
+
+
+   if (navTop > 100) {
+      document.querySelector('.header').classList.add('sect1');
+   } else {
+      document.querySelector('.header').classList.remove('sect1');
+   }
+
+
+
    $('.use__slider').slick({
       variableWidth: false,
       variableHeight: false,
@@ -105,7 +134,6 @@ $(document).ready(function () {
       ]
    });
 
-
    let slickD = $('.use__item');
    $('.slick__dots').on('afterChange', function (event, slick, currentSlide, nextSlide) {
       $(slickD).each(function (index, element) {
@@ -116,9 +144,7 @@ $(document).ready(function () {
          else if (slickD[index].classList.contains('slick-current') == false) {
             $(this).prev().removeClass('hsa');
          }
-
       });
    });
-
 });
 
