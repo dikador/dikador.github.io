@@ -140,9 +140,12 @@ $(document).ready(function () {
 
          if (slickD[index].classList.contains('slick-current')) {
             $(slickD).prev().addClass('hsa');
+            $('.slick-current').addClass('hsl');
+
          }
          else if (slickD[index].classList.contains('slick-current') == false) {
             $(this).prev().removeClass('hsa');
+            $(this).removeClass('hsl');
          }
       });
    });
