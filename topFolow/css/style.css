@@ -240,6 +240,9 @@ h6 {
   left: 0;
   width: 100%;
   padding-left: 15px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .header.sect1 {
@@ -648,8 +651,8 @@ h6 {
 
 .slick__dots .slick-current.hsl img {
   overflow: visible;
-  -webkit-box-shadow: 0px 0px 10px 5px rgba(128, 71, 185, 0.212);
-          box-shadow: 0px 0px 10px 5px rgba(128, 71, 185, 0.212);
+  -webkit-box-shadow: 0px 0px 9px 7px rgba(128, 71, 185, 0.212);
+          box-shadow: 0px 0px 9px 7px rgba(128, 71, 185, 0.212);
   -webkit-transition: 0.4s ease;
   -o-transition: 0.4s ease;
   transition: 0.4s ease;
@@ -863,6 +866,7 @@ h6 {
 .btn-news {
   width: 200px;
   height: 58px;
+  text-transform: uppercase;
 }
 
 .news__teleg-top {
@@ -1066,7 +1070,6 @@ body.burger__active {
 .btn-purple {
   color: #7834be !important;
   border-color: #7834be;
-  text-transform: uppercase;
 }
 
 .btn-red {
