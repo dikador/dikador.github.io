@@ -66,6 +66,7 @@ $(document).ready(function () {
       swipe: false,
       autoplay: true,
       asNavFor: '.slick__dots',
+      lazyLoad: 'ondemand',
 
       responsive: [
          {
