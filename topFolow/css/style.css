@@ -1129,6 +1129,10 @@ body.burger__active {
   .intro__title {
     font-size: 52px;
   }
+
+  .intro {
+    margin-top: 240px;
+  }
 }
 
 @media (max-width: 1450px) {
