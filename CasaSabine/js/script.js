@@ -122,9 +122,17 @@ $(document).ready(function () {
          },
       ]
    })
+
+   document.querySelector('.close-popup').addEventListener('click', () => {
+      var videoSrc = $("#main-youtbube").attr("src");
+      $("#main-youtbube").attr("src", "");
+      $("#main-youtbube").attr("src", videoSrc);
+   })
 });
 
 $('.fotorama').fotorama({});
 
 var input = document.querySelector('#date');
 var datepicker = new HotelDatepicker(input);
+
+
