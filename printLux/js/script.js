@@ -90,36 +90,50 @@ $(document).ready(function () {
 
    rectable('.retractable-block', '.advantages__title');
 
-   ymaps.ready(function () {
+   // ymaps.ready(function () {
 
-      // Иницилизация карты и координаты центра на карте
-      var map = new ymaps.Map('map', {
-         center: [55.761494, 37.748777],
-         zoom: 18,
-         controls: []
-      });
+   //    // Иницилизация карты и координаты центра на карте
+   //    var map = new ymaps.Map('map', {
+   //       center: [55.761494, 37.748777],
+   //       zoom: 18,
+   //       controls: []
+   //    });
 
-      // Метка
-      var point = new ymaps.Placemark([55.761494, 37.748777], {
-         balloonContent: 'Шоссэ Энтузиастов, 31c17'
-      }, {
-         preset: 'islands#darkOrangeDotIcon'
-      });
+   //    // Метка
+   //    var point = new ymaps.Placemark([55.761494, 37.748777], {
+   //       balloonContent: 'Шоссэ Энтузиастов, 31c17'
+   //    }, {
+   //       preset: 'islands#darkOrangeDotIcon'
+   //    });
 
-      map.geoObjects.add(point);
+   //    map.geoObjects.add(point);
 
 
-      map.events.add('click', function (e) {
-         $('.contact__map').addClass('rectable');
-         $('.contact__content-left')[0].classList.add('rectable');
-      });
+   //    // map.events.add('click', function (e) {
+   //    //    $('.contact__map').addClass('rectable');
+   //    //    $('.contact__content-left')[0].classList.add('rectable');
+   //    // });
 
+   //   
+
+   // });
+
+
+   // $('.contact__map').click(function (e) {
+   $('.contact__right').bind('touchstart click', function (e) {
+      e.preventDefault();
+      $('.contact__map')[0].classList.add('rectable');
+      $('.contact__content-left')[0].classList.add('rectable');
    });
 
-   $('.btn-close').click(function (e) {
-      document.querySelector('.contact__map').classList.remove('rectable');
+
+   $('#btnClose').click(function (e) {
+      e.preventDefault();
+      $('.contact__map')[0].classList.remove('rectable');
       $('.contact__content-left')[0].classList.remove('rectable');
    });
+
+
 
 
 
