@@ -918,6 +918,8 @@ body.lock {
 .advantages {
   border: none;
   position: relative;
+  visibility: visible;
+  padding-bottom: 350px;
 }
 
 .advantages__container {
@@ -1016,7 +1018,6 @@ body.lock {
 }
 
 .contact {
-  padding-top: 350px;
   position: relative;
   z-index: 10;
 }
@@ -1978,13 +1979,13 @@ body.lock {
        object-fit: cover;
   }
 
+  .advantages {
+    padding-bottom: 170px;
+  }
+
   .contact__map {
     height: 450px;
     width: 58%;
-  }
-
-  .contact {
-    padding-top: 170px;
   }
 
   .contact__content-info {
@@ -2253,6 +2254,14 @@ body.lock {
     text-shadow: -0 -1px 0 #f754e1, 0 1px 0 #f754e1, -0 1px 0 #f754e1, 0 1px 0 #f754e1, -1px -0 0 #f754e1, 1px -0 0 #f754e1, 1px 0 0 #f754e1, 1px 0 0 #f754e1, -1px -1px 0 #f754e1, 1px -1px 0 #f754e1, -1px 1px 0 #f754e1, 1px 1px 0 #f754e1, 1px 1px 0 #f754e1, 1px -1px 0 #f754e1, -1px 1px 0 #f754e1, 1px 1px 0 #f754e1;
   }
 
+  .advantages {
+    padding-bottom: 00px;
+  }
+
+  .contact {
+    padding-top: 80px;
+  }
+
   .contact__title {
     font-size: calc(17px + 81.6 * ((100vw - 320px) / 1920));
   }
@@ -2300,10 +2309,6 @@ body.lock {
 
   .contact__content-text {
     margin-top: 1.5em;
-  }
-
-  .contact {
-    padding-top: 80px;
   }
 
   .social {
@@ -2601,16 +2606,16 @@ body.lock {
     min-height: 200px;
   }
 
-  .contact__content-info {
-    margin: 30px 0px;
-  }
-
   .contact {
     padding-top: 20px;
   }
 
+  .contact__content-info {
+    margin: 30px 0px;
+  }
+
   .contact__map {
-    height: 350px;
+    height: 300px;
   }
 
   .btn-contact {

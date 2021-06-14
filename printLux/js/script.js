@@ -1,4 +1,7 @@
 $(document).ready(function () {
+
+   // Высота полосок равная всему документу
+
    function setEqualHeight(element, wrapper) {
       let wrapperHeight = $(wrapper).height() + 'px';
       $(element).height(wrapperHeight);
@@ -6,6 +9,9 @@ $(document).ready(function () {
 
    setEqualHeight(".html__strip", '.wrapper');
 
+
+
+   // Наведение на элеменент и смещение картинок
 
    function hoverImg(hoverElement, changingElement) {
       $(hoverElement).mouseover(function (e) {
@@ -25,7 +31,6 @@ $(document).ready(function () {
 
    // phone mask
    $(".phone__input").mask("+7 (999) 99-99-999");
-
 
 
    // select in popup
@@ -79,7 +84,7 @@ $(document).ready(function () {
             $(retractableBlock).removeClass('rectable');
             $(this).addClass('rectable');
 
-            if ($('.advantages__block-left')[0].classList.contains('rectable')) {
+            if ($(retractableBlock)[0].classList.contains('rectable')) {
                return $(retractableBlockText).addClass('rectable');
             } else {
                return $(retractableBlockText).removeClass('rectable');
@@ -88,7 +93,7 @@ $(document).ready(function () {
       });
    }
 
-   rectable('.retractable-block', '.advantages__title');
+   rectable('.advantages__block', '.advantages__title');
 
    // ymaps.ready(function () {
 
