@@ -1125,7 +1125,7 @@ h6 {
   line-height: 143% !important;
 }
 
-.pagination li a {
+.pagination .page-item .page-link {
   border: 1px solid #dfe3e8 !important;
   background-color: transparent !important;
   border-radius: 4px;
@@ -1150,119 +1150,49 @@ h6 {
           box-shadow: none !important;
 }
 
-.pagination li a:last-child {
+.pagination .page-item .page-link:last-child {
   margin-right: 0;
 }
 
-.pagination li a:hover {
+.pagination .page-item .page-link:hover {
   border: 1.5px solid #6302c4 !important;
 }
 
-.pagination .ellipse {
-  border: 1px solid #dfe3e8 !important;
-  background-color: transparent !important;
-  border-radius: 4px;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 143%;
-  text-align: center;
-  color: #212b36;
-  margin-right: 18px !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 32px;
-  height: 32px;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
-}
-
-.pagination .ellipse:last-child {
-  margin-right: 0;
-}
-
-.pagination .page-link.prev {
-  background: url(../img/blog_arrow_left.svg) center no-repeat;
-  border-radius: 4px;
-  margin-right: 18px !important;
-  display: block;
-  font-size: 0;
-  width: 32px;
-  height: 32px;
-  background-color: transparent;
-}
-
-.pagination .page-link.next {
-  background: url(../img/blog_arrow_right.svg) center no-repeat;
-  background-color: transparent;
-  border-radius: 4px;
-  margin-right: 18px !important;
-  display: block;
-  font-size: 0;
-  width: 32px;
-  height: 32px;
-}
-
-.pagination .current {
-  border: 1px solid #7935be;
-  background-color: transparent;
-  border-radius: 4px;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 143%;
-  text-align: center;
+.pagination .page-item.active .page-link {
+  border: 1px solid #7935be !important;
   color: #7935be;
-  margin-right: 18px !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 32px;
-  height: 32px;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
 }
 
-.pagination .current:last-child {
-  margin-right: 0;
-}
-
-.pagination .current:hover {
-  border: 1.5px solid #6302c4;
-}
-
-.pagination .current.prev {
-  background: url(../img/blog_arrow_left.svg) center no-repeat;
-  margin-right: 18px !important;
-  display: block;
-  font-size: 0;
-  width: 32px;
-  height: 32px;
-  border: none;
-  background-color: #bc9adf;
-}
-
-.pagination .current.next {
-  border: none;
+.pagination .page-item.next .page-link {
   background: url(../img/blog_arrow_right.svg) center no-repeat;
+  background-color: transparent;
   border-radius: 4px;
-  margin-right: 0 !important;
+  margin-right: 18px !important;
   display: block;
   font-size: 0;
   width: 32px;
   height: 32px;
-  background-color: #bc9adf;
+}
+
+.pagination .page-item.last {
+  display: none;
+}
+
+.pagination .page-item.first {
+  display: none;
+}
+
+.pagination .page-item.prev .page-link {
+  background: url(../img/blog_arrow_left.svg) center no-repeat;
+  font-size: 0 !important;
+}
+
+.pagination .page-item.prev.disabled .page-link {
+  background-color: #bc9adf !important;
+}
+
+.pagination .page-item.next.disabled .page-link {
+  background-color: #bc9adf !important;
 }
 
 .readIntro {
@@ -2641,38 +2571,22 @@ body.burger__active {
     font-size: 15px;
   }
 
-  .pagination .current {
-    margin-right: 8px !important;
+  .pagination .page-item .page-link {
     font-size: 12px;
-    width: 28px;
-    height: 28px;
+    margin-right: 10px !important;
+    width: 30px;
+    height: 30px;
   }
 
-  .pagination .current.prev {
-    margin-right: 8px !important;
+  .pagination .page-item .prev {
+    width: 30px !important;
+    height: 30px !important;
+    margin-right: 10px;
   }
 
-  .pagination .prev {
-    width: 28px !important;
-    height: 28px !important;
-  }
-
-  .pagination .next {
-    width: 28px !important;
-    height: 28px !important;
-  }
-
-  .pagination .ellipse {
-    margin-right: 8px !important;
-    width: 28px;
-    height: 28px;
-  }
-
-  .pagination li a {
-    font-size: 12px;
-    margin-right: 8px !important;
-    width: 28px;
-    height: 28px;
+  .pagination .page-item.next .page-link {
+    width: 30px;
+    height: 30px;
   }
 
   .mainBlog {

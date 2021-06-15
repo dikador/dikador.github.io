@@ -459,16 +459,15 @@
 
 
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   <script src="js/jquery.simplePagination.min.js"></script>
+   <script src="js/jquery.twbsPagination.min.js"></script>
+
    <script>
-      $('.pagination').pagination({
-         items: 10,
-         currentPage: 1,
-         displayedPages: 2,
-         edges: 1,
-         cssStyle: '',
-         itemOnPage: 4,
-         // hrefTextPrefix — Строка, используемая в атрибуте HREF, добавляется перед номером страницы. По умолчанию: “#page- “.
+      $('.pagination').twbsPagination({
+         totalPages: 10,
+         visiblePages: 4,
+         onPageClick: function (event, page) {
+            // $('#page-content').text('Page ' + page);
+         }
       });
    </script>
    <script src="js/script.min.js"></script>

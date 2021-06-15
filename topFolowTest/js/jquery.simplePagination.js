@@ -338,8 +338,6 @@
 			return o.onPageClick(pageIndex + 1, event);
 		},
 
-
-
 	};
 
 	$.fn.pagination = function (method) {
