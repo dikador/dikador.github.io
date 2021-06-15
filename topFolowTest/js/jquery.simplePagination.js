@@ -339,46 +339,6 @@
 		},
 
 
-		_ellipseClick: function ($panel) {
-			var self = this,
-				o = this.data('pagination'),
-				$ellip = $panel.find('.ellipse');
-			$ellip.addClass('clickable').parent().removeClass('disabled');
-			$ellip.click(function (event) {
-				if (!o.disable) {
-					var $this = $(this),
-						val = (parseInt($this.parent().prev().text(), 10) || 0) + 1;
-					$this
-						.html('<input type="number" min="1" max="' + o.pages + '" step="1" value="' + val + '">')
-						.find('input')
-						.focus()
-						.click(function (event) {
-							// prevent input number arrows from bubbling a click event on $ellip
-							event.stopPropagation();
-						})
-						.keyup(function (event) {
-							var val = $(this).val();
-							if (event.which === 13 && val !== '') {
-								// enter to accept
-								if ((val > 0) && (val <= o.pages))
-									methods._selectPage.call(self, val - 1);
-							} else if (event.which === 27) {
-								// escape to cancel
-								$ellip.empty().html(o.ellipseText);
-							}
-						})
-						.bind('blur', function (event) {
-							var val = $(this).val();
-							if (val !== '') {
-								methods._selectPage.call(self, val - 1);
-							}
-							$ellip.empty().html(o.ellipseText);
-							return false;
-						});
-				}
-				return false;
-			});
-		}
 
 	};
 
