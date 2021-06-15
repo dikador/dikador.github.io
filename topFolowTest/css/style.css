@@ -1158,7 +1158,7 @@ h6 {
   border: 1.5px solid #6302c4 !important;
 }
 
-.pagination .ellipse.clickable {
+.pagination .ellipse {
   border: 1px solid #dfe3e8 !important;
   background-color: transparent !important;
   border-radius: 4px;
@@ -1183,7 +1183,7 @@ h6 {
           box-shadow: none !important;
 }
 
-.pagination .ellipse.clickable:last-child {
+.pagination .ellipse:last-child {
   margin-right: 0;
 }
 
@@ -2662,7 +2662,7 @@ body.burger__active {
     height: 28px !important;
   }
 
-  .pagination .ellipse.clickable {
+  .pagination .ellipse {
     margin-right: 8px !important;
     width: 28px;
     height: 28px;

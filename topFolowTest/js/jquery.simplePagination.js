@@ -8,10 +8,10 @@
 * http://flaviusmatis.github.com/license.html
 */
 
-(function($){
+(function ($) {
 
 	var methods = {
-		init: function(options) {
+		init: function (options) {
 			var o = $.extend({
 				items: 1,
 				itemsOnPage: 1,
@@ -32,13 +32,13 @@
 				selectOnClick: true,
 				nextAtFront: false,
 				invertPageOrder: false,
-				useStartEdge : true,
-				useEndEdge : true,
-				onPageClick: function(pageNumber, event) {
+				useStartEdge: true,
+				useEndEdge: true,
+				onPageClick: function (pageNumber, event) {
 					// Callback triggered when a page is clicked
 					// Page number is given as an optional parameter
 				},
-				onInit: function() {
+				onInit: function () {
 					// Callback triggered immediately after initialization
 				}
 			}, options || {});
@@ -52,7 +52,7 @@
 				o.currentPage = !o.invertPageOrder ? 0 : o.pages - 1;
 			o.halfDisplayed = o.displayedPages / 2;
 
-			this.each(function() {
+			this.each(function () {
 				self.addClass(o.cssStyle + ' simple-pagination').data('pagination', o);
 				methods._draw.call(self);
 			});
@@ -62,12 +62,12 @@
 			return this;
 		},
 
-		selectPage: function(page) {
+		selectPage: function (page) {
 			methods._selectPage.call(this, page - 1);
 			return this;
 		},
 
-		prevPage: function() {
+		prevPage: function () {
 			var o = this.data('pagination');
 			if (!o.invertPageOrder) {
 				if (o.currentPage > 0) {
@@ -81,7 +81,7 @@
 			return this;
 		},
 
-		nextPage: function() {
+		nextPage: function () {
 			var o = this.data('pagination');
 			if (!o.invertPageOrder) {
 				if (o.currentPage < o.pages - 1) {
@@ -95,11 +95,11 @@
 			return this;
 		},
 
-		getPagesCount: function() {
+		getPagesCount: function () {
 			return this.data('pagination').pages;
 		},
 
-		setPagesCount: function(count) {
+		setPagesCount: function (count) {
 			this.data('pagination').pages = count;
 		},
 
@@ -107,7 +107,7 @@
 			return this.data('pagination').currentPage + 1;
 		},
 
-		destroy: function(){
+		destroy: function () {
 			this.empty();
 			return this;
 		},
@@ -120,12 +120,12 @@
 			return this;
 		},
 
-		redraw: function(){
+		redraw: function () {
 			methods._draw.call(this);
 			return this;
 		},
 
-		disable: function(){
+		disable: function () {
 			var o = this.data('pagination');
 			o.disabled = true;
 			this.data('pagination', o);
@@ -133,7 +133,7 @@
 			return this;
 		},
 
-		enable: function(){
+		enable: function () {
 			var o = this.data('pagination');
 			o.disabled = false;
 			this.data('pagination', o);
@@ -158,12 +158,12 @@
 			return this;
 		},
 
-		getItemsOnPage: function() {
+		getItemsOnPage: function () {
 			return this.data('pagination').itemsOnPage;
 		},
 
-		_draw: function() {
-			var	o = this.data('pagination'),
+		_draw: function () {
+			var o = this.data('pagination'),
 				interval = methods._getInterval(o),
 				i,
 				tagName;
@@ -176,18 +176,18 @@
 
 			// Generate Prev link
 			if (o.prevText) {
-				methods._appendItem.call(this, !o.invertPageOrder ? o.currentPage - 1 : o.currentPage + 1, {text: o.prevText, classes: 'prev'});
+				methods._appendItem.call(this, !o.invertPageOrder ? o.currentPage - 1 : o.currentPage + 1, { text: o.prevText, classes: 'prev' });
 			}
 
 			// Generate Next link (if option set for at front)
 			if (o.nextText && o.nextAtFront) {
-				methods._appendItem.call(this, !o.invertPageOrder ? o.currentPage + 1 : o.currentPage - 1, {text: o.nextText, classes: 'next'});
+				methods._appendItem.call(this, !o.invertPageOrder ? o.currentPage + 1 : o.currentPage - 1, { text: o.nextText, classes: 'next' });
 			}
 
 			// Generate start edges
 			if (!o.invertPageOrder) {
 				if (interval.start > 0 && o.edges > 0) {
-					if(o.useStartEdge) {
+					if (o.useStartEdge) {
 						var end = Math.min(o.edges, interval.start);
 						for (i = 0; i < end; i++) {
 							methods._appendItem.call(this, i);
@@ -201,7 +201,7 @@
 				}
 			} else {
 				if (interval.end < o.pages && o.edges > 0) {
-					if(o.useStartEdge) {
+					if (o.useStartEdge) {
 						var begin = Math.max(o.pages - o.edges, interval.end);
 						for (i = o.pages - 1; i >= begin; i--) {
 							methods._appendItem.call(this, i);
@@ -235,7 +235,7 @@
 					} else if (o.pages - o.edges - interval.end == 1) {
 						methods._appendItem.call(this, interval.end);
 					}
-					if(o.useEndEdge) {
+					if (o.useEndEdge) {
 						var begin = Math.max(o.pages - o.edges, interval.end);
 						for (i = begin; i < o.pages; i++) {
 							methods._appendItem.call(this, i);
@@ -250,7 +250,7 @@
 						methods._appendItem.call(this, o.edges);
 					}
 
-					if(o.useEndEdge) {
+					if (o.useEndEdge) {
 						var end = Math.min(o.edges, interval.start);
 						for (i = end - 1; i >= 0; i--) {
 							methods._appendItem.call(this, i);
@@ -261,7 +261,7 @@
 
 			// Generate Next link (unless option is set for at front)
 			if (o.nextText && !o.nextAtFront) {
-				methods._appendItem.call(this, !o.invertPageOrder ? o.currentPage + 1 : o.currentPage - 1, {text: o.nextText, classes: 'next'});
+				methods._appendItem.call(this, !o.invertPageOrder ? o.currentPage + 1 : o.currentPage - 1, { text: o.nextText, classes: 'next' });
 			}
 
 			if (o.ellipsePageSet && !o.disabled) {
@@ -270,19 +270,19 @@
 
 		},
 
-		_getPages: function(o) {
+		_getPages: function (o) {
 			var pages = Math.ceil(o.items / o.itemsOnPage);
 			return pages || 1;
 		},
 
-		_getInterval: function(o) {
+		_getInterval: function (o) {
 			return {
 				start: Math.ceil(o.currentPage > o.halfDisplayed ? Math.max(Math.min(o.currentPage - o.halfDisplayed, (o.pages - o.displayedPages)), 0) : 0),
 				end: Math.ceil(o.currentPage > o.halfDisplayed ? Math.min(o.currentPage + o.halfDisplayed, o.pages) : Math.min(o.displayedPages, o.pages))
 			};
 		},
 
-		_appendItem: function(pageIndex, opts) {
+		_appendItem: function (pageIndex, opts) {
 			var self = this, options, $link, o = self.data('pagination'), $linkWrapper = $('<li></li>'), $ul = self.find('ul');
 
 			pageIndex = pageIndex < 0 ? 0 : (pageIndex < o.pages ? pageIndex : o.pages - 1);
@@ -311,7 +311,7 @@
 				} else {
 					$link = $('<span >' + (options.text) + '</span>');
 				}
-				$link.click(function(event){
+				$link.click(function (event) {
 					return methods._selectPage.call(self, pageIndex, event);
 				});
 			}
@@ -329,7 +329,7 @@
 			}
 		},
 
-		_selectPage: function(pageIndex, event) {
+		_selectPage: function (pageIndex, event) {
 			var o = this.data('pagination');
 			o.currentPage = pageIndex;
 			if (o.selectOnClick) {
@@ -339,50 +339,10 @@
 		},
 
 
-		_ellipseClick: function($panel) {
-			var self = this,
-				o = this.data('pagination'),
-				$ellip = $panel.find('.ellipse');
-			$ellip.addClass('clickable').parent().removeClass('disabled');
-			$ellip.click(function(event) {
-				if (!o.disable) {
-					var $this = $(this),
-						val = (parseInt($this.parent().prev().text(), 10) || 0) + 1;
-					$this
-						.html('<input type="number" min="1" max="' + o.pages + '" step="1" value="' + val + '">')
-						.find('input')
-						.focus()
-						.click(function(event) {
-							// prevent input number arrows from bubbling a click event on $ellip
-							event.stopPropagation();
-						})
-						.keyup(function(event) {
-							var val = $(this).val();
-							if (event.which === 13 && val !== '') {
-								// enter to accept
-								if ((val>0)&&(val<=o.pages))
-								methods._selectPage.call(self, val - 1);
-							} else if (event.which === 27) {
-								// escape to cancel
-								$ellip.empty().html(o.ellipseText);
-							}
-						})
-						.bind('blur', function(event) {
-							var val = $(this).val();
-							if (val !== '') {
-								methods._selectPage.call(self, val - 1);
-							}
-							$ellip.empty().html(o.ellipseText);
-							return false;
-						});
-				}
-				return false;
-			});
-		}
 
 	};
 
-	$.fn.pagination = function(method) {
+	$.fn.pagination = function (method) {
 
 		// Method calling logic
 		if (methods[method] && method.charAt(0) != '_') {
@@ -390,7 +350,7 @@
 		} else if (typeof method === 'object' || !method) {
 			return methods.init.apply(this, arguments);
 		} else {
-			$.error('Method ' +  method + ' does not exist on jQuery.pagination');
+			$.error('Method ' + method + ' does not exist on jQuery.pagination');
 		}
 
 	};
