@@ -1122,6 +1122,7 @@ h6 {
 
 .mainBlog__block-text {
   color: #94a2b3;
+  line-height: 143% !important;
 }
 
 .pagination li a {
@@ -1216,7 +1217,7 @@ h6 {
   font-size: 14px;
   line-height: 143%;
   text-align: center;
-  color: #212b36;
+  color: #7935be;
   margin-right: 18px !important;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1672,6 +1673,12 @@ body.burger__active {
 
   .secondary-text {
     font-size: calc(14px + 6 * (100vw / 1440));
+  }
+}
+
+@media (min-width: 1700px) {
+  .blogIntro__title {
+    font-size: 49px !important;
   }
 }
 
