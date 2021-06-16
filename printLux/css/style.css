@@ -1243,7 +1243,6 @@ body.lock {
 }
 
 .requirements__bg-title {
-  top: 0;
   left: 0;
   right: 0;
   text-align: center;
@@ -1253,14 +1252,14 @@ body.lock {
   text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  top: -45%;
+  top: -60%;
 }
 
 .requirements__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 12em;
+  margin-top: 21em;
   position: relative;
   z-index: 10;
   -webkit-box-pack: center;
@@ -1673,7 +1672,7 @@ body.lock {
   }
 
   .requirements__buttons {
-    margin-top: 10em;
+    margin-top: 24em;
   }
 
   .requirements__triangle {
@@ -1838,7 +1837,7 @@ body.lock {
   }
 
   .requirements__buttons {
-    margin-top: 8em;
+    margin-top: 20em;
   }
 
   .requirements__triangle {
@@ -2017,7 +2016,7 @@ body.lock {
   }
 
   .requirements__buttons {
-    margin-top: 6.5em;
+    margin-top: 17em;
   }
 
   .btn-requirements {
@@ -2372,7 +2371,7 @@ body.lock {
   }
 
   .requirements__buttons {
-    margin-top: 4.5em;
+    margin-top: 13.5em;
   }
 
   .btn-requirements {
@@ -2515,7 +2514,7 @@ body.lock {
   }
 
   .requirements__buttons {
-    margin-top: 6.5em;
+    margin-top: 5.5em;
   }
 
   .btn-requirements {
@@ -2652,11 +2651,15 @@ body.lock {
   }
 
   .requirements__bg-title {
-    top: -30%;
+    top: -40%;
   }
 
   .requirements__buttons {
     margin-top: 6em;
+  }
+
+  .btn-requirements {
+    padding: 1.3rem 0;
   }
 
   .footer {
