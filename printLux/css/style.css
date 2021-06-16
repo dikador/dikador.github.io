@@ -1260,18 +1260,17 @@ body.lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-top: 12em;
   position: relative;
   z-index: 10;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .btn-requirements {
-  max-width: 500px;
   height: 145px;
-  width: 43%;
+  width: 80%;
   line-height: 1.2em;
   letter-spacing: 0.2em;
   background-color: #fff;
@@ -2021,6 +2020,10 @@ body.lock {
     margin-top: 6.5em;
   }
 
+  .btn-requirements {
+    max-width: 65%;
+  }
+
   .requirements__bg-title {
     max-width: 54%;
   }
@@ -2511,14 +2514,8 @@ body.lock {
     bottom: -9.1px !important;
   }
 
-  .btn-requirements {
-    width: 100%;
-    max-width: 100%;
-    margin-top: 30px;
-  }
-
-  .btn-requirements:first-child {
-    margin-top: 0;
+  .requirements__buttons {
+    margin-top: 6.5em;
   }
 
   .btn-requirements {
@@ -2659,7 +2656,7 @@ body.lock {
   }
 
   .requirements__buttons {
-    margin-top: 5em;
+    margin-top: 6em;
   }
 
   .footer {
