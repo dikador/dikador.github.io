@@ -2194,6 +2194,15 @@ body.lock {
     margin-top: -13px;
   }
 
+  .grey-text {
+    color: #bd00a3;
+    text-shadow: 0 -0.6px 0 rgba(255, 255, 255, 0.54), 0 -0.6px 0 rgba(255, 255, 255, 0.54), 0 0.8px 0 rgba(255, 255, 255, 0.54), 0 0.6px 0 rgba(255, 255, 255, 0.54), -0.8px 0 0 rgba(255, 255, 255, 0.54), 0.6px 0 0 rgba(255, 255, 255, 0.54) !important;
+  }
+
+  .main-strip {
+    width: 2px;
+  }
+
   .about__block-text {
     font-size: calc(11px + 61.2 * ((100vw - 320px) / 1920));
   }
