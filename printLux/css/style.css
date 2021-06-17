@@ -2178,6 +2178,10 @@ body.lock {
     margin-top: 1.3rem;
   }
 
+  .header__nav-link {
+    font-weight: 800 !important;
+  }
+
   .main-container {
     padding: 0px 20px;
   }
@@ -2197,6 +2201,7 @@ body.lock {
   .grey-text {
     color: #bd00a3;
     text-shadow: 0 -0.6px 0 rgba(255, 255, 255, 0.54), 0 -0.6px 0 rgba(255, 255, 255, 0.54), 0 0.8px 0 rgba(255, 255, 255, 0.54), 0 0.6px 0 rgba(255, 255, 255, 0.54), -0.8px 0 0 rgba(255, 255, 255, 0.54), 0.6px 0 0 rgba(255, 255, 255, 0.54) !important;
+    opacity: 0.8;
   }
 
   .main-strip {
@@ -2469,7 +2474,7 @@ body.lock {
   }
 
   .header__nav-item {
-    margin-top: 1rem;
+    margin-top: 0.9rem;
   }
 
   .intro__title {
@@ -2608,6 +2613,10 @@ body.lock {
     margin-top: 65px;
   }
 
+  .header__nav-item {
+    margin-top: 0.65rem;
+  }
+
   .intro__title {
     line-height: 1.88em;
     margin-top: -11px;
@@ -2646,7 +2655,7 @@ body.lock {
   }
 
   .contact__map {
-    height: 300px;
+    height: 250px;
   }
 
   .btn-contact {
