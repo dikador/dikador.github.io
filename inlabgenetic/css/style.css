@@ -497,6 +497,62 @@ h6 {
   margin-right: 10px;
 }
 
+.checkbox {
+  display: none;
+}
+
+input.checkbox:checked + label,
+input.checkbox:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+input.checkbox:checked + label:before,
+input.checkbox:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 2px;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #0a1128;
+  background-color: #ffffff;
+}
+
+input.checkbox:checked + label:after,
+input.checkbox:not(:checked) + label:after,
+input.input-radio-block:checked + label:after,
+input.input-radio-block:not(:checked) + label:after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.input-checkbox {
+  display: none;
+}
+
+input.checkbox:checked + label:after {
+  left: 2.3px;
+  top: 5.5px;
+  width: 8.8px;
+  height: 5.1px;
+  border-left: 1.3px solid #07b1ea;
+  border-bottom: 1.3px solid #07b1ea;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.search__filter-item {
+  position: relative;
+}
+
 .table__wrapper {
   height: 70vh;
   overflow-y: auto;
