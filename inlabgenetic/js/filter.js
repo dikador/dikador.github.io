@@ -1,12 +1,4 @@
 
-document.querySelectorAll('.close-filter').forEach(element => {
-   element.addEventListener('click', (e) => {
-      e.preventDefault();
-      document.querySelector('.search__filter-properties').classList.toggle('active');
-   })
-});
-
-
 function searchFilter(inputs, tables) {
    var input, filter, table, tr, td, i;
    input = document.getElementById(inputs);
@@ -25,10 +17,77 @@ function searchFilter(inputs, tables) {
    }
 };
 
+document.querySelectorAll('.close-filter').forEach(element => {
+   element.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.querySelector('.search__filter-properties').classList.toggle('active');
+   })
+});
+
+const clientFIO = document.querySelector('#clientFIO').checked;
+const clientRace = document.querySelector('#clientRace').checked;
+const clientDateBirth = document.querySelector('#clientDateOfBirth').checked;
+const clientYindel = document.querySelector('#clientYindel').checked;
+const clientGender = document.querySelector('#clientGender').checked;
+const clientOne = document.querySelector('#column1').checked;
+const clientTwo = document.querySelector('#column2').checked;
+const clientThree = document.querySelector('#column3').checked;
+
+const table = document.querySelector('#tableClient');
+const tr = table.querySelectorAll("tr");
+
+for (let i = 0; i < tr.length; i++) {
+   if (!clientFIO) document.querySelectorAll('.tableClient-FIO')[i].style.display = 'none';
+   if (!clientRace) document.querySelectorAll('.tableClient-race')[i].style.display = 'none';
+   if (!clientDateBirth) document.querySelectorAll('.tableClient-dateBirthDay')[i].style.display = 'none';
+   if (!clientYindel) document.querySelectorAll('.tableClient-yindel')[i].style.display = 'none';
+   if (!clientGender) document.querySelectorAll('.tableClient-gender')[i].style.display = 'none';
+   if (!clientOne) document.querySelectorAll('.tableClient-one')[i].style.display = 'none';
+   if (!clientTwo) document.querySelectorAll('.tableClient-two')[i].style.display = 'none';
+   if (!clientThree) document.querySelectorAll('.tableClient-three')[i].style.display = 'none';
+}
+
+
+document.querySelector('.btn-apply').addEventListener('click', (e) => {
+   e.preventDefault();
+
+   const clientFIO = document.querySelector('#clientFIO').checked;
+   const clientRace = document.querySelector('#clientRace').checked;
+   const clientDateBirth = document.querySelector('#clientDateOfBirth').checked;
+   const clientYindel = document.querySelector('#clientYindel').checked;
+   const clientGender = document.querySelector('#clientGender').checked;
+   const clientOne = document.querySelector('#column1').checked;
+   const clientTwo = document.querySelector('#column2').checked;
+   const clientThree = document.querySelector('#column3').checked;
+
+   const table = document.querySelector('#tableClient');
+   const tr = table.querySelectorAll("tr");
+
+   for (let i = 0; i < tr.length; i++) {
+      if (clientFIO) document.querySelectorAll('.tableClient-FIO')[i].style.display = '';
+      if (clientRace) document.querySelectorAll('.tableClient-race')[i].style.display = '';
+      if (clientDateBirth) document.querySelectorAll('.tableClient-dateBirthDay')[i].style.display = '';
+      if (clientYindel) document.querySelectorAll('.tableClient-yindel')[i].style.display = '';
+      if (clientGender) document.querySelectorAll('.tableClient-gender')[i].style.display = '';
+      if (clientOne) document.querySelectorAll('.tableClient-one')[i].style.display = '';
+      if (clientTwo) document.querySelectorAll('.tableClient-two')[i].style.display = '';
+      if (clientThree) document.querySelectorAll('.tableClient-three')[i].style.display = '';
+
+
+      if (!clientFIO) document.querySelectorAll('.tableClient-FIO')[i].style.display = 'none';
+      if (!clientRace) document.querySelectorAll('.tableClient-race')[i].style.display = 'none';
+      if (!clientDateBirth) document.querySelectorAll('.tableClient-dateBirthDay')[i].style.display = 'none';
+      if (!clientYindel) document.querySelectorAll('.tableClient-yindel')[i].style.display = 'none';
+      if (!clientGender) document.querySelectorAll('.tableClient-gender')[i].style.display = 'none';
+      if (!clientOne) document.querySelectorAll('.tableClient-one')[i].style.display = 'none';
+      if (!clientTwo) document.querySelectorAll('.tableClient-two')[i].style.display = 'none';
+      if (!clientThree) document.querySelectorAll('.tableClient-three')[i].style.display = 'none';
+   }
+})
+
 document.querySelector('#searchClient').addEventListener('keyup', () => {
    searchFilter('searchClient', 'tableClient');
 });
-
 
 
 

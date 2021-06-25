@@ -66,17 +66,13 @@ $(document).ready(function () {
 
             $(btnStelsBack).click(function () {
                fullTable.classList.remove('visible');
+               $(btnOpenFullTable).removeClass('visible');
                $(this).removeClass('visible');
 
                e.currentTarget.classList.remove('show');
             });
          }
       });
-   });
-
-
-   document.querySelector('.header__burger').addEventListener('click', () => {
-      document.querySelector('.sidebar').classList.toggle('disable');
    });
 
 

@@ -1,4 +1,13 @@
 $(document).ready(function () {
+   if (window.innerWidth <= 1024) {
+      document.querySelector('.sidebar').classList.add('disable')
+   }
+
+   document.querySelector('.header__burger').addEventListener('click', () => {
+      document.querySelector('.sidebar').classList.toggle('disable');
+      document.querySelector('.header__burger').classList.toggle('disable');
+   });
+
 
    $('.main_input_file').change(function (e) {
       e.preventDefault();
@@ -11,7 +20,4 @@ $(document).ready(function () {
       $(".f_name").val(f_name.join(", "));
    });
 
-   document.querySelector('.header__burger').addEventListener('click', () => {
-      document.querySelector('.sidebar').classList.toggle('disable');
-   });
 });
