@@ -618,7 +618,7 @@ input.checkbox:checked + label:after {
 }
 
 .table-title {
-  padding: 16px 22px !important;
+  padding: 16px 10px 16px 22px !important;
   color: #0a1128;
 }
 
@@ -1560,6 +1560,10 @@ body {
 @media (max-width: 1200px) {
   .nav-link {
     padding: 9px 0 9px 10px;
+  }
+
+  #tableClient .table-title svg {
+    display: none;
   }
 
   .sidebar__title {
