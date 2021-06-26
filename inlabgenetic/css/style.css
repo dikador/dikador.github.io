@@ -318,7 +318,7 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 32px;
+  margin-top: 62px;
 }
 
 .search__input {
@@ -1374,6 +1374,10 @@ body {
 .header {
   -webkit-box-shadow: 0px 4px 12px rgba(0, 31, 84, 0.04);
           box-shadow: 0px 4px 12px rgba(0, 31, 84, 0.04);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 4000;
 }
 
 .header__inner {
@@ -1748,7 +1752,7 @@ body {
 
   .sidebar {
     width: 250px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -1773,6 +1777,29 @@ body {
   .header__burger.disable span:before,
   .header__burger.disable span:after {
     background-color: #fff;
+  }
+}
+
+@media (max-width: 1024px) and (max-height: 500px) {
+  .side-nav {
+    height: auto;
+  }
+
+  .sidebar__menu {
+    height: 100vh;
+  }
+
+  .sidebar__title {
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .sidebar__img {
+    padding: 15px 0px;
+  }
+
+  .nav {
+    margin-bottom: 15px !important;
   }
 }
 
@@ -2000,6 +2027,18 @@ body {
 
   .acord-labaratoryNumber {
     width: 100%;
+  }
+
+  .sidebar__img {
+    padding: 10px 0px 10px 10px;
+  }
+
+  .sidebar__img img {
+    width: 80%;
+  }
+
+  .nav-item {
+    margin-bottom: 5px;
   }
 }
 
