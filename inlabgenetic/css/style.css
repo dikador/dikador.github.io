@@ -1818,7 +1818,7 @@ body {
   }
 
   .table-change {
-    margin-right: 20px;
+    margin-right: 10px;
   }
 
   .sidebar {
@@ -1830,7 +1830,7 @@ body {
   }
 
   .table-changes {
-    min-width: 110px !important;
+    min-width: 100px !important;
   }
 }
 
@@ -2127,6 +2127,26 @@ body {
 
   .sidebar__menu {
     height: calc(60vh - 20px);
+  }
+
+  .table-changes {
+    min-width: 60px;
+  }
+
+  .table-changes {
+    padding-right: 0;
+    margin-right: 0px;
+    min-width: 45px !important;
+    padding: 10px 10px 10px 5px !important;
+  }
+
+  .table-changes .table-change {
+    margin-right: 0px;
+  }
+
+  .table-report {
+    min-width: 40px !important;
+    padding: 10px 10px 10px 5px !important;
   }
 }
 
