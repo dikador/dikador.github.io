@@ -2048,6 +2048,10 @@ body {
   .nav-item {
     margin-bottom: 5px;
   }
+
+  .sidebar {
+    overflow: auto;
+  }
 }
 
 @media (max-width: 576px) {
@@ -2150,6 +2154,10 @@ body {
     -webkit-transform: translate(0, 220%);
         -ms-transform: translate(0, 220%);
             transform: translate(0, 220%);
+  }
+
+  .sidebar__menu {
+    height: 50%;
   }
 }
 
