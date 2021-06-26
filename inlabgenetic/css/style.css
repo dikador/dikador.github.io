@@ -1785,8 +1785,16 @@ body {
     height: auto;
   }
 
-  .sidebar__menu {
+  .sidebar {
     height: 100vh;
+  }
+
+  .sidebar__menu {
+    height: 100%;
+  }
+
+  .side-nav {
+    height: 80%;
   }
 
   .sidebar__title {
@@ -2030,7 +2038,7 @@ body {
   }
 
   .sidebar__img {
-    padding: 10px 0px 10px 10px;
+    padding: 30px 0px 10px 10px;
   }
 
   .sidebar__img img {
@@ -2303,6 +2311,18 @@ body {
     width: 16px;
     margin-right: 7px;
   }
+
+  .sidebar__img {
+    padding-top: 40px;
+  }
+
+  .sidebar__img img {
+    width: 70%;
+  }
+
+  .sidebar {
+    min-width: 150px;
+  }
 }
 
 @media (max-width: 385px) {
@@ -2363,5 +2383,12 @@ body {
 
   .file-downloaded svg {
     display: none;
+  }
+}
+
+@media (max-height: 600px) {
+  .sidebar__title {
+    margin-bottom: 17px;
+    margin-top: 20px;
   }
 }
