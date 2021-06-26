@@ -1781,10 +1781,6 @@ body {
 }
 
 @media (max-width: 1024px) and (max-height: 500px) {
-  .side-nav {
-    height: auto;
-  }
-
   .sidebar {
     height: 100vh;
   }
@@ -1794,7 +1790,7 @@ body {
   }
 
   .side-nav {
-    height: 80%;
+    height: 75%;
   }
 
   .sidebar__title {
@@ -1919,6 +1915,10 @@ body {
 
   .acord__top-item {
     width: 48%;
+  }
+
+  .sidebar {
+    height: 70%;
   }
 }
 
@@ -2055,6 +2055,10 @@ body {
     margin-bottom: 10px;
   }
 
+  .table__wrapper {
+    min-height: 64vh;
+  }
+
   .acord__top::before {
     right: 17.5px;
   }
@@ -2146,6 +2150,17 @@ body {
     -webkit-transform: translate(0, 220%);
         -ms-transform: translate(0, 220%);
             transform: translate(0, 220%);
+  }
+}
+
+@media (max-width: 576px) and (max-height: 400px) {
+  .sidebar__title {
+    margin-bottom: 12px !important;
+    margin-top: 14px !important;
+  }
+
+  .nav {
+    margin-bottom: 0 !important;
   }
 }
 
@@ -2322,6 +2337,7 @@ body {
 
   .sidebar {
     min-width: 150px;
+    height: 100%;
   }
 }
 
