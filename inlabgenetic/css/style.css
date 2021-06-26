@@ -600,6 +600,7 @@ input.checkbox:checked + label:after {
   font-size: 16px;
   line-height: 22px;
   text-align: left;
+  width: 100%;
   color: #0a1128;
   opacity: 0.7;
   border-bottom: 1px solid #4acef9;
@@ -2414,7 +2415,7 @@ body {
   }
 
   .sidebar__img {
-    padding: 15px 0px;
+    padding-bottom: 15px;
   }
 
   .nav {
