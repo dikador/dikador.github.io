@@ -556,6 +556,10 @@ input.checkbox:checked + label:after {
   padding-right: 10px;
 }
 
+.none-table {
+  display: none;
+}
+
 .block-wrap::-webkit-scrollbar {
   border-radius: 10px;
   width: 4px;
