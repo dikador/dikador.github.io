@@ -69,7 +69,8 @@
               top: 0
             })
             console.log(obj);
-            _self.canvas.add(obj).renderAll()
+            _self.canvas.add(obj).renderAll();
+
             // _self.canvas.trigger('object:modified')
           }
         )
