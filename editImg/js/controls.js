@@ -16,6 +16,7 @@ fabric.Object.prototype.set({
    centeredScaling: true,
    cornerStyle: 'rect',
    cornerStrokeColor: '#9ba3ae',
+   cornerSize: 17,
    borderDashArray: [4, 2]
 });
 // fabric.Object.prototype.centeredRotation = false;
