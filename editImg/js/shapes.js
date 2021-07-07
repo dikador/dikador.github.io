@@ -70,7 +70,7 @@
             })
             console.log(obj);
             _self.canvas.add(obj).renderAll()
-            _self.canvas.trigger('object:modified')
+            // _self.canvas.trigger('object:modified')
           }
         )
       } catch (_) {
