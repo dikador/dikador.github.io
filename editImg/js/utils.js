@@ -1,7 +1,6 @@
 /**
  * Define util functions
  */
-
 /**
  * Get fabric js gradient from colorstops, orientation and angle
  * @param {Array} handlers array of color stops

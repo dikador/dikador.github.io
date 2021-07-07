@@ -147,7 +147,3 @@ function cloneObject(eventData, transform) {
       canvas.add(cloned).setActiveObject(cloned);
    });
 }
-
-
-
-

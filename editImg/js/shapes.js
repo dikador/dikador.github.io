@@ -1,6 +1,7 @@
 /**
  * Define action to add shape to canvas
  */
+
 (function () {
   'use strict';
   const defaultShapes = [

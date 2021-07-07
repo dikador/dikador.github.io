@@ -1,6 +1,7 @@
 /**
  * Define action to upload, drag & drop images into canvas
  */
+
 (function () {
 
   var upload = function (canvas) {
@@ -76,9 +77,9 @@
         // handle image, read file, add to canvas
         reader.onload = (f) => {
           fabric.Image.fromURL(f.target.result, (img) => {
-            // img.set({
-            //   mode: 'multiply',
-            // })
+            img.set({
+              mode: 'multiply',
+            })
 
             let objectSizeText = new fabric.Textbox(`Ш: мм`, {
               fontSize: 10,
@@ -132,7 +133,7 @@
       image.set({
         height: image.height,
         width: image.width,
-        // mode: 'multiply',
+        mode: 'multiply',
       });
 
       let objectSizeText = new fabric.Textbox(`Ш: мм`, {

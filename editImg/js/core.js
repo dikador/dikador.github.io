@@ -2,8 +2,6 @@
  * The Core of Image Editor
  */
 
-
-
 (function () {
   'use strict';
 

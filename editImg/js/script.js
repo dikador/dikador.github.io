@@ -2,16 +2,14 @@
 //    return false;
 // };
 
-// window.onerror = function () {
-//    alert('An error has occurred!');
-//    return true;
-// };
+window.onerror = function () {
+   alert('An error has occurred!');
+   return true;
+};
 
-console.log('e');
+console.log('ef');
 
-window.onerror = function (e) {
-   alert(e.message, e.filename, e.lineno, e)
-}
+
 
 window.onerror = function (msg, url, line) {
    alert(msg + "\n" + url + "\n" + "\n" + line);
@@ -101,12 +99,5 @@ $("#font-family option").each(function (index, element) {
 });
 
 
-
-
-$(document).ready(function () {
-   let thisColorBlock = $('.sp-thumb-el.sp-thumb-active')[0].title;
-   setActiveFontStyle(fabric.Textbox.prototype, 'fill', thisColorBlock);
-});
-
-
-
+let thisColorBlock = $('.sp-thumb-el.sp-thumb-active')[0].title;
+setActiveFontStyle(fabric.Textbox.prototype, 'fill', thisColorBlock);

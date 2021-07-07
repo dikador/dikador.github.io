@@ -1,4 +1,3 @@
-
 (function () {
   const textBoxDrawing = function (fabricCanvas) {
 
