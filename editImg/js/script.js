@@ -7,6 +7,8 @@
 //    return true;
 // };
 
+alert('asd');
+
 
 window.onerror = function (e) {
    alert(e.message, e.filename, e.lineno)
