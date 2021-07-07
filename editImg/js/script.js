@@ -1,6 +1,6 @@
-// window.onbeforeunload = function () {
-//    return false;
-// };
+window.onbeforeunload = function () {
+   return false;
+};
 
 // window.onerror = function () {
 //    alert('An error has occurred!');
