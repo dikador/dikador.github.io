@@ -1,11 +1,15 @@
-window.onbeforeunload = function () {
-   return false;
-};
+// window.onbeforeunload = function () {
+//    return false;
+// };
 
 // window.onerror = function () {
 //    alert('An error has occurred!');
 //    return true;
 // };
+
+window.onerror = function (e) {
+   alert(e.message, e.filename, e.lineno)
+}
 
 window.onerror = function (msg, url, line) {
    alert(msg + "\n" + url + "\n" + "\n" + line);
