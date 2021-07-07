@@ -173,6 +173,10 @@ body {
   cursor: pointer;
 }
 
+#menu-inscription-tab {
+  margin-bottom: 0;
+}
+
 .nav-link:hover,
 .nav-link:focus {
   color: #9ba3ae;
@@ -551,6 +555,10 @@ body {
 .toolpanel {
   position: relative;
   display: none;
+}
+
+.search__img {
+  mix-blend-mode: multiply;
 }
 
 .input-container {

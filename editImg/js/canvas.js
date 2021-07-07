@@ -9,12 +9,21 @@
       let fabricCanvas = new fabric.Canvas('c').setDimensions({
         width: 620,
         height: 877,
-        // backgroundColor: '#ffffff'
-      })
 
-      fabricCanvas.set({
-        allowTouchScrolling: true,
+        allowTouchScrolling: true
       });
+
+      // var disableScroll = function () {
+      //   fabricCanvas.allowTouchScrolling = false;
+      // };
+
+      // var enableScroll = function () {
+      //   fabricCanvas.allowTouchScrolling = true;
+      // };
+
+      // fabricCanvas.on('selection:created', fabricCanvas.disableScroll);
+      // fabricCanvas.on('selection:cleared', fabricCanvas.enableScroll);
+
 
 
       $('.formatList').bind('change', function (e) {
@@ -23,7 +32,8 @@
         if (formatList === 'a4') {
           fabricCanvas.setDimensions({
             width: fabric.util.parseUnit('210mm'),
-            height: fabric.util.parseUnit('297mm')
+            height: fabric.util.parseUnit('297mm'),
+            allowTouchScrolling: true
           })
         }
 
