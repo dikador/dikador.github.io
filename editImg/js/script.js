@@ -7,6 +7,8 @@
 //    return true;
 // };
 
+console.log('e');
+
 window.onerror = function (e) {
    alert(e.message, e.filename, e.lineno, e)
 }
