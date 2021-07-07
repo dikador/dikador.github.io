@@ -7,11 +7,8 @@
 //    return true;
 // };
 
-alert('asd');
-
-
 window.onerror = function (e) {
-   alert(e.message, e.filename, e.lineno)
+   alert(e.message, e.filename, e.lineno, e)
 }
 
 window.onerror = function (msg, url, line) {
@@ -101,7 +98,13 @@ $("#font-family option").each(function (index, element) {
    element.style.fontFamily = element.value;
 });
 
-let thisColorBlock = $('.sp-thumb-el.sp-thumb-active')[0].title;
-setActiveFontStyle(fabric.Textbox.prototype, 'fill', thisColorBlock);
+
+
+
+$(document).ready(function () {
+   let thisColorBlock = $('.sp-thumb-el.sp-thumb-active')[0].title;
+   setActiveFontStyle(fabric.Textbox.prototype, 'fill', thisColorBlock);
+});
+
 
 

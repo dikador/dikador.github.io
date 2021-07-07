@@ -122,14 +122,13 @@ body {
 .header {
   position: fixed;
   top: 3px;
-  left: 0;
   height: 50px !important;
   width: 100%;
   padding-right: var(--bs-gutter-x, 0.4rem);
   padding-left: var(--bs-gutter-x, 0.4rem);
-  margin-right: auto;
-  margin-left: auto;
   z-index: 1000;
+  margin: 0 auto;
+  left: 0;
 }
 
 .contents {
@@ -662,6 +661,7 @@ body {
   padding-right: var(--bs-gutter-x, 0.4rem);
   padding-left: var(--bs-gutter-x, 0.4rem);
   padding-bottom: 30px;
+  max-width: 576px !important;
 }
 
 .design_tool {
