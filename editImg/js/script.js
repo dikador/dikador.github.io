@@ -1,14 +1,22 @@
-// window.onbeforeunload = function () {
-//    return false;
+window.onbeforeunload = function () {
+   return false;
+};
+
+// window.onerror = function () {
+//    alert('An error has occurred!');
+//    return true;
 // };
 
+window.onerror = function (msg, url, line) {
+   alert(msg + "\n" + url + "\n" + "\n" + line);
+   return true;
+};
 
 $('.open__selected').click(function (e) {
    $(`.tab-content .toolpanel`).slideToggle(250);
    $(this).toggleClass('open');
 
 });
-
 
 function getRndInteger(min, max) {
    return Math.floor(Math.random() * (max - min + 1)) + min;
