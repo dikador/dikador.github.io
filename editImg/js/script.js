@@ -10,11 +10,10 @@
 // console.log('ef');
 
 
-
-window.onerror = function (msg, url, line) {
-   alert(msg + "\n" + url + "\n" + "\n" + line);
-   return true;
-};
+// window.onerror = function (msg, url, line) {
+//    alert(msg + "\n" + url + "\n" + "\n" + line);
+//    return true;
+// };
 
 $('.open__selected').click(function (e) {
    $(`.tab-content .toolpanel`).slideToggle(250);

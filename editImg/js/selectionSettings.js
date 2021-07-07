@@ -138,7 +138,7 @@
             break;
         }
         _self.canvas.renderAll();
-        _self.canvas.trigger('object:modified');
+        // _self.canvas.trigger('object:modified');
       })
 
       $(`.tab-content .toolpanel#select-panel .family #font-family`).change(function () {
