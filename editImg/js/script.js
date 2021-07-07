@@ -2,12 +2,12 @@
 //    return false;
 // };
 
-window.onerror = function () {
-   alert('An error has occurred!');
-   return true;
-};
+// window.onerror = function () {
+//    alert('An error has occurred!');
+//    return true;
+// };
 
-console.log('ef');
+// console.log('ef');
 
 
 
