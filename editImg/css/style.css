@@ -553,10 +553,6 @@ body {
   display: none;
 }
 
-.search__img {
-  mix-blend-mode: multiply;
-}
-
 .input-container {
   display: inline-block;
 }
