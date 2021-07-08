@@ -94,6 +94,13 @@
               }));
             }
 
+            if (img.width > 900) {
+              img.set({
+                scaleX: 0.5,
+                scaleY: 0.5,
+              })
+            };
+
             // img.filters.push(new fabric.Image.filters.BlendColor({
             //   image: img,
             //   mode: 'multiply',
