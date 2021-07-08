@@ -84,7 +84,6 @@
               scaleY: 0.7,
             });
 
-            console.log(file.type);
             if (file.type === 'image/jpeg') {
               img.filters.push(new fabric.Image.filters.RemoveColor({
                 // color: "#fff",
@@ -94,10 +93,17 @@
               }));
             }
 
-            if (img.width > 900) {
+            if (img.width > 600) {
               img.set({
                 scaleX: 0.5,
                 scaleY: 0.5,
+              })
+            };
+
+            if (img.width > 900) {
+              img.set({
+                scaleX: 0.3,
+                scaleY: 0.3,
               })
             };
 
@@ -162,8 +168,31 @@
       image.set({
         height: image.height,
         width: image.width,
-        // mode: 'multiply',
       });
+
+
+      if (image._element.src.includes('.jpg')) {
+        image.filters.push(new fabric.Image.filters.RemoveColor({
+          // color: "#fff",
+          threshold: 13,
+          alpha: 0,
+          distance: 0.2
+        }));
+      }
+
+      if (image.width > 600) {
+        image.set({
+          scaleX: 0.5,
+          scaleY: 0.5,
+        })
+      };
+
+      if (image.width > 900) {
+        image.set({
+          scaleX: 0.3,
+          scaleY: 0.3,
+        })
+      };
 
       let objectSizeText = new fabric.Textbox(`Ш: мм`, {
         fontSize: 10,
