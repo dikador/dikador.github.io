@@ -84,7 +84,9 @@
               scaleY: 0.7,
             });
 
-            if (file.type === 'image/jpeg') {
+            console.log(img.width);
+
+            if (file.type === 'image/jpeg' || file.type === 'image/png') {
               img.filters.push(new fabric.Image.filters.RemoveColor({
                 // color: "#fff",
                 threshold: 13,
@@ -100,18 +102,19 @@
               })
             };
 
-            if (img.width > 900) {
+            if (img.width > 800) {
               img.set({
                 scaleX: 0.3,
                 scaleY: 0.3,
               })
             };
 
-            // img.filters.push(new fabric.Image.filters.BlendColor({
-            //   image: img,
-            //   mode: 'multiply',
-            //   alpha: 0.5
-            // }));
+            if (img.width > 1200) {
+              img.set({
+                scaleX: 0.2,
+                scaleY: 0.2,
+              })
+            };
 
             img.applyFilters();
 
@@ -137,8 +140,8 @@
 
 
             let groupObjectSize = new fabric.Group([img, objectSizeWrapper, objectSizeText], {
-              left: getRndInteger(120, 200),
-              top: getRndInteger(90, 200),
+              left: getRndInteger(150, 250),
+              top: getRndInteger(100, 200),
             });
 
 
@@ -216,8 +219,8 @@
 
 
       let groupObjectSize = new fabric.Group([image, objectSizeWrapper, objectSizeText], {
-        left: getRndInteger(120, 200),
-        top: getRndInteger(110, 200),
+        left: getRndInteger(160, 240),
+        top: getRndInteger(100, 200),
       });
 
       canvas.add(groupObjectSize).setActiveObject(groupObjectSize);

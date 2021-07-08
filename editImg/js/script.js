@@ -1,6 +1,6 @@
-window.onbeforeunload = function () {
-   return false;
-};
+// window.onbeforeunload = function () {
+//    return false;
+// };
 
 // window.onerror = function () {
 //    alert('An error has occurred!');
@@ -29,22 +29,46 @@ const containerWidth = window.innerWidth - 11.2;
 
 const design_tool = document.querySelector('.tool_placeholder');
 
-$('.input-btn').bind('change', function (e) {
-   const indentsTop = document.querySelector('.indentTop:checked').value;
-   const indentsBot = document.querySelector('.indentsBot:checked').value;
-   const indentsLeft = document.querySelector('.indentsLeft:checked').value;
-   const indentsRight = document.querySelector('.indentsRight:checked').value;
+let listHeight = containerWidth * 1.41 + 'px';
+$('.design_tool')[0].style.height = listHeight;
 
-   design_tool.style.paddingTop = indentsTop * 0.48 + 'mm';
-   design_tool.style.paddingBottom = indentsBot * 0.48 + 'mm';
-   design_tool.style.paddingLeft = indentsLeft * 0.48 + 'mm';
-   design_tool.style.paddingRight = indentsRight * 0.48 + 'mm';
+
+$('.input-list').bind('change', function (e) {
+   let container = $('.design_tool'),
+      formatList = document.querySelector('.formatList:checked').value,
+      mainHeight,
+      mainWidth,
+
+      indentsTop = document.querySelector('.indentTop:checked').value,
+      indentsBot = document.querySelector('.indentsBot:checked').value,
+      indentsLeft = document.querySelector('.indentsLeft:checked').value,
+      indentsRight = document.querySelector('.indentsRight:checked').value;
+
+   if (formatList === 'a4') {
+      mainHeight = 297;
+      mainWidth = 210;
+   } else if (formatList === 'a5') {
+      mainHeight = 210;
+      mainWidth = 148;
+      console.log('afsd');
+   }
+
+
+   indentsTop = +(100 / (mainHeight / indentsTop)).toFixed(2);
+   indentsBot = +(100 / (mainHeight / indentsBot)).toFixed(2);
+   indentsLeft = +(100 / (mainWidth / indentsLeft)).toFixed(2);
+   indentsRight = +(100 / (mainWidth / indentsRight)).toFixed(2);
+
+
+   design_tool.style.paddingTop = (container.height() / 100) * indentsTop + 'px';
+   design_tool.style.paddingBottom = (container.height() / 100) * indentsBot + 'px';
+   design_tool.style.paddingLeft = (container.height() / 100) * indentsLeft + 'px';
+   design_tool.style.paddingRight = (container.height() / 100) * indentsRight + 'px';
 });
 
 $('.input-btn').trigger('change');
 
-let listHeight = containerWidth * 1.41 + 'px';
-$('.design_tool')[0].style.height = listHeight;
+
 
 
 try {
