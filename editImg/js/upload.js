@@ -78,8 +78,29 @@
         reader.onload = (f) => {
           fabric.Image.fromURL(f.target.result, (img) => {
             img.set({
-              mode: 'multiply',
-            })
+              height: img.height,
+              width: img.width,
+              scaleX: 0.7,
+              scaleY: 0.7,
+            });
+
+            console.log(file.type);
+            if (file.type === 'image/jpeg') {
+              img.filters.push(new fabric.Image.filters.RemoveColor({
+                // color: "#fff",
+                threshold: 13,
+                alpha: 0,
+                distance: 0.2
+              }));
+            }
+
+            // img.filters.push(new fabric.Image.filters.BlendColor({
+            //   image: img,
+            //   mode: 'multiply',
+            //   alpha: 0.5
+            // }));
+
+            img.applyFilters();
 
             let objectSizeText = new fabric.Textbox(`Ш: мм`, {
               fontSize: 10,
@@ -103,9 +124,10 @@
 
 
             let groupObjectSize = new fabric.Group([img, objectSizeWrapper, objectSizeText], {
-              left: getRndInteger(80, 200),
-              top: getRndInteger(70, 200),
+              left: getRndInteger(120, 200),
+              top: getRndInteger(90, 200),
             });
+
 
             canvas.add(groupObjectSize).setActiveObject(groupObjectSize);
 
@@ -133,7 +155,7 @@
       image.set({
         height: image.height,
         width: image.width,
-        mode: 'multiply',
+        // mode: 'multiply',
       });
 
       let objectSizeText = new fabric.Textbox(`Ш: мм`, {
@@ -158,8 +180,8 @@
 
 
       let groupObjectSize = new fabric.Group([image, objectSizeWrapper, objectSizeText], {
-        left: getRndInteger(100, 200),
-        top: getRndInteger(90, 200),
+        left: getRndInteger(120, 200),
+        top: getRndInteger(110, 200),
       });
 
       canvas.add(groupObjectSize).setActiveObject(groupObjectSize);

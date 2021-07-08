@@ -676,6 +676,7 @@ body {
   z-index: 2;
   background: #fff;
   overflow: hidden;
+  max-height: 800px;
 }
 
 .toolpanel.type-textbox {
