@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Golden</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo">
+                    <a href="">Golden</a>
+                </div>
+                <nav>
+                    <ul class="nav">
+                        <li class="nav-link">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-link">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-link">
+                            <a class="nav-link" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-link">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-link">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div onclick="openBurger()" class="header__burger">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <div class="wrapper">
+            <section class="intro">
+                <div class="intro__inner">
+                    <h2 class="intro__sub-title">Welcome To Our Studio!</h2>
+                    <h1 class="intro__main-title">It’s nice to Meet you</h1>
+                    <a href="#contact" class="button btn-intro btn-yelow">Tell Me More</a>
+                </div>
+            </section>
+        </div>
+
+
+
+        <section id="services" class="services">
+            <div class="container">
+                <div class="title__page">
+                    <h2 class="title">Services</h2>
+                    <h3 class="sub__title">Proin iaculis purus consequat sem cure. </h3>
+                </div>
+
+                <div class="services__inner">
+                    <div class="services__block">
+                        <picture>
+                            <source srcset="img/serv-1.svg" type="image/webp"><img src="img/serv-1.svg" alt="basket">
+                        </picture>
+                        <h4>E-Commerce</h4>
+                        <p>Proin iaculis purus consequat sem cure
+                            digni ssim. Donec porttitora entum suscipit
+                            aenean rhoncus posuere odio in tincidunt.</p>
+                    </div>
+
+                    <div class="services__block">
+                        <picture>
+                            <source srcset="img/serv-2.svg" type="image/webp"><img src="img/serv-2.svg" alt="notebook">
+                        </picture>
+                        <h4>Responsive Web</h4>
+                        <p>Proin iaculis purus consequat sem cure
+                            digni ssim. Donec porttitora entum suscipit
+                            aenean rhoncus posuere odio in tincidunt.</p>
+                    </div>
+
+                    <div class="services__block">
+                        <picture>
+                            <source srcset="img/serv-3.svg" type="image/webp"><img src="img/serv-3.svg" alt="lock">
+                        </picture>
+                        <h4>Web Security</h4>
+                        <p>Proin iaculis purus consequat sem cure
+                            digni ssim. Donec porttitora entum suscipit
+                            aenean rhoncus posuere odio in tincidunt.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <div class="title__page">
+                    <h2 class="title">Our portfolio</h2>
+                    <h3 class="sub__title">Proin iaculis purus consequat sem cure.</h3>
+                </div>
+                <div class="portfolio__inner">
+                    <div class="portfolio__block">
+                        <div class="portfolio__block__img">
+                            <picture>
+                                <source srcset="img/portf-1.png" type="image/webp"><img src="img/portf-1.png" alt="">
+                            </picture>
+
+                            <div class="portfolio__stels">
+                                <a href="">
+                                    <h5 class="portfolio__stels__title">Lorem ipsum</h5>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="portfolio__block__item">
+                            <a href="">
+                                <h4 class="title__block portfolio__title-block">Ebony & Ivory</h4>
+                            </a>
+                            <h5 class="sub__title block__sub-title">Branding</h5>
+                        </div>
+
+                    </div>
+
+                    <div class="portfolio__block">
+                        <div class="portfolio__block__img">
+                            <picture>
+                                <source srcset="img/portf-2.webp" type="image/webp"><img src="img/portf-2.svg" alt="">
+                            </picture>
+
+                            <div class="portfolio__stels">
+                                <a href="">
+                                    <h5 class="portfolio__stels__title">Lorem ipsum</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio__block__item">
+                            <a href="">
+                                <h4 class="title__block portfolio__title-block ">Smart Stationary</h4>
+                            </a>
+                            <h5 class="sub__title block__sub-title">Print Design</h5>
+                        </div>
+                    </div>
+                    <div class="portfolio__block">
+                        <div class="portfolio__block__img">
+                            <picture>
+                                <source srcset="img/portf-3.webp" type="image/webp"><img src="img/portf-3.svg" alt="">
+                            </picture>
+
+                            <div class="portfolio__stels">
+                                <a href="">
+                                    <h5 class="portfolio__stels__title">Lorem ipsum</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio__block__item">
+                            <a href="">
+                                <h4 class="title__block portfolio__title-block">Clever Poster</h4>
+                            </a>
+                            <h5 class="sub__title block__sub-title">Print Design</h5>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__block">
+                        <div class="portfolio__block__img">
+                            <picture>
+                                <source srcset="img/portf-4.webp" type="image/webp"><img src="img/portf-4.svg" alt="">
+                            </picture>
+
+                            <div class="portfolio__stels">
+                                <a href="">
+                                    <h5 class="portfolio__stels__title">Lorem ipsum</h5>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__block__item">
+                            <a href="">
+                                <h4 class="title__block portfolio__title-block">Vinyl Record</h4>
+                            </a>
+                            <h5 class="sub__title block__sub-title">Product Mock-Up</h5>
+                        </div>
+                    </div>
+
+
+
+                    <div class="portfolio__block">
+                        <div class="portfolio__block__img">
+                            <picture>
+                                <source srcset="img/portf-5.jpg" type="image/webp"><img src="img/portf-5.jpg" alt="">
+                            </picture>
+                            <div class="portfolio__stels">
+                                <a href="">
+                                    <h5 class="portfolio__stels__title">Lorem ipsum</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio__block__item">
+                            <a href="">
+                                <h4 class="title__block portfolio__title-block">Treehouse Template
+                                </h4>
+                            </a>
+                            <h5 class="sub__title block__sub-title">Web Design</h5>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__block">
+                        <div class="portfolio__block__img">
+                            <picture>
+                                <source srcset="img/portf-6.webp" type="image/webp"><img src="img/portf-6.png" alt="">
+                            </picture>
+
+                            <div class="portfolio__stels">
+                                <a href="">
+                                    <h5 class="portfolio__stels__title">Lorem ipsum</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio__block__item">
+                            <a href="">
+                                <h4 class="title__block portfolio__title-block">Burned Logo</h4>
+                            </a>
+                            <h5 class="sub__title block__sub-title">Branding</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="title__page">
+                    <h2 class="title">About Us</h2>
+                    <h3 class="sub__title">Proin iaculis purus consequat sem cure. </h3>
+                </div>
+
+                <div class="about__inner">
+
+
+
+                    <div class="about__block">
+                        <div class="about__block__text">
+                            <h4 class="title__block about__title"><span>July 2010</span> <br>
+                                Our Humble Beginnings
+                            </h4>
+                            <p>Proin iaculis purus consequat sem cure
+                                digni ssim. Donec porttitora entum suscipit
+                                aenean rhoncus posuere odio in tincidunt. Proin
+                                iaculis purus consequat sem cure digni
+                                ssim. Donec porttitora entum suscipit.</p>
+                        </div>
+
+
+                        <div class="about__block__imeage">
+                            <picture>
+                                <source srcset="img/about-1.jpg" type="image/webp"><img src="img/about-1.jpg" alt="things on the table">
+                            </picture>
+                        </div>
+                    </div>
+
+
+
+                    <div class="about__block">
+                        <div class="about__block__text text-reverse">
+                            <h4 class="title__block about__title"><span>January 2011</span> <br>
+                                Facing Startup Battles
+
+                            </h4>
+                            <p>Proin iaculis purus consequat sem cure
+                                digni ssim. Donec porttitora entum suscipit
+                                aenean rhoncus posuere odio in tincidunt. Proin
+                                iaculis purus consequat sem cure digni
+                                ssim. Donec porttitora entum suscipit.</p>
+                        </div>
+
+
+                        <div class="about__block__imeage">
+                            <img src="img/about-2.jpg" alt="things on the table">
+                        </div>
+                    </div>
+
+
+
+                    <div class="about__block">
+                        <div class="about__block__text">
+                            <h4 class="title__block about__title"><span>December 2012</span> <br>
+                                Enter The Dark Days
+
+
+                            </h4>
+                            <p>Proin iaculis purus consequat sem cure
+                                digni ssim. Donec porttitora entum suscipit
+                                aenean rhoncus posuere odio in tincidunt. Proin
+                                iaculis purus consequat sem cure digni
+                                ssim. Donec porttitora entum suscipit.</p>
+                        </div>
+
+
+                        <div class="about__block__imeage">
+                            <picture>
+                                <source srcset="img/about-3.webp" type="image/webp"><img src="img/about-3.jpg" alt="things on the table">
+                            </picture>
+                        </div>
+                    </div>
+
+
+
+                    <div class="about__block">
+                        <div class="about__block__text text-reverse">
+                            <h4 class="title__block about__title"><span>february 2014</span> <br>
+                                Our Triumph
+
+
+                            </h4>
+                            <p>Proin iaculis purus consequat sem cure
+                                digni ssim. Donec porttitora entum suscipit
+                                aenean rhoncus posuere odio in tincidunt. Proin
+                                iaculis purus consequat sem cure digni
+                                ssim. Donec porttitora entum suscipit.</p>
+                        </div>
+
+
+                        <div class="about__block__imeage">
+                            <picture>
+                                <source srcset="img/about-4.webp" type="image/webp"><img src="img/about-4.jpg" alt="things on the table">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="about__buttons">
+                        <div class="about__block__imeage about__block__button">
+                            <button onclick="moreHistory()" type="button" class="button btn-yelow btn-circle">Our Story
+                                Continues ...</button>
+                        </div>
+                    </div>
+
+
+                    <div class="about__more-block">
+
+                        <div class="about__block">
+                            <div class="about__block__text">
+                                <h4 class="title__block about__title"><span>July 2015</span> <br>
+                                    Our Humble Beginnings
+                                </h4>
+                                <p>Proin iaculis purus consequat sem cure
+                                    digni ssim. Donec porttitora entum suscipit
+                                    aenean rhoncus posuere odio in tincidunt. Proin
+                                    iaculis purus consequat sem cure digni
+                                    ssim. Donec porttitora entum suscipit.</p>
+                            </div>
+
+
+                            <div class="about__block__imeage">
+                                <picture>
+                                    <source srcset="img/about-1.jpg" type="image/webp"><img src="img/about-1.jpg" alt="things on the table">
+                                </picture>
+                            </div>
+                        </div>
+
+
+
+                        <div class="about__block">
+                            <div class="about__block__text text-reverse">
+                                <h4 class="title__block about__title"><span>february 2016</span> <br>
+                                    Our Triumph
+
+
+                                </h4>
+                                <p>Proin iaculis purus consequat sem cure
+                                    digni ssim. Donec porttitora entum suscipit
+                                    aenean rhoncus posuere odio in tincidunt. Proin
+                                    iaculis purus consequat sem cure digni
+                                    ssim. Donec porttitora entum suscipit.</p>
+                            </div>
+
+
+                            <div class="about__block__imeage about__block-end">
+                                <picture>
+                                    <source srcset="img/about-4.webp" type="image/webp"><img src="img/about-4.jpg" alt="things on the table">
+                                </picture>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class="team">
+            <div class="container">
+                <div class="title__page">
+                    <h2 class="title">our amazing team</h2>
+                    <h3 class="sub__title">Proin iaculis purus consequat sem </h3>
+                </div>
+                <div class="team__inner">
+                    <div class="team__block">
+                        <div class="team__block-imeage">
+                            <a href="">
+                                <picture>
+                                    <source srcset="img/businessman.svg" type="image/webp"><img src="img/businessman.svg" alt="avatar man">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="team__block-title">
+                            <a href="">
+                                <h4 class="title__block block-team-title">Kimberly Thompson</h4>
+                            </a>
+                            <p>Marketer</p>
+                        </div>
+
+                        <div class="social">
+                            <a class="twitter-social" href="#"><i class="fa social-block twitter-block  fa-twitter" aria-hidden="true"></i></a>
+
+                            <a class="facebook-social" href="#"><i class="fa social-block facebook-block fa-facebook" aria-hidden="true"></i></a>
+
+                            <a class="google-social" href="#"><i class="fa social-block google-block fa-google-plus" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="team__block">
+                        <div class="team__block-imeage">
+                            <a href="">
+                                <picture>
+                                    <source srcset="img/businessman.svg" type="image/webp"><img src="img/businessman.svg" alt="avatar man">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="team__block-title">
+                            <a href="">
+                                <h4 class="title__block block-team-title">Alex Thompson</h4>
+                            </a>
+                            <p>coder</p>
+                        </div>
+
+                        <div class="social">
+                            <a class="twitter-social" href="#"><i class="fa social-block twitter-block  fa-twitter" aria-hidden="true"></i></a>
+
+                            <a class="facebook-social" href="#"><i class="fa social-block facebook-block fa-facebook" aria-hidden="true"></i></a>
+
+                            <a class="google-social" href="#"><i class="fa social-block google-block fa-google-plus" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="team__block">
+                        <div class="team__block-imeage">
+                            <a href="">
+                                <picture>
+                                    <source srcset="img/boss.svg" type="image/webp"><img src="img/boss.svg" alt="avatar man">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="team__block-title">
+                            <a href="">
+                                <h4 class="title__block block-team-title">Willson barker</h4>
+                            </a>
+                            <p>Graphic Designer</p>
+                        </div>
+
+                        <div class="social">
+                            <a class="twitter-social" href="#"><i class="fa social-block twitter-block  fa-twitter" aria-hidden="true"></i></a>
+
+                            <a class="facebook-social" href="#"><i class="fa social-block facebook-block fa-facebook" aria-hidden="true"></i></a>
+
+                            <a class="google-social" href="#"><i class="fa social-block google-block fa-google-plus" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <p class="team__text">Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
+                    aenean rhoncus posuere odio in tincidunt proin iaculis.</p>
+            </div>
+        </section>
+
+        <div class="brands">
+            <div class="container">
+                <div class="brands__wrapper">
+                    <div class="brand__block">
+                        <a href="">
+                            <picture>
+                                <source srcset="img/brands-1.png" type="image/webp"><img src="img/brands-1.png" alt="Envato">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="brand__block">
+                        <a href="">
+                            <picture>
+                                <source srcset="img/brands-2.jpg" type="image/webp"><img src="img/brands-2.jpg" alt="WordPress">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="brand__block">
+                        <a href="">
+                            <picture>
+                                <source srcset="img/brands-3.webp" type="image/webp"><img src="img/brands-3.png" alt="Tuts+">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="brand__block">
+                        <a href="">
+                            <picture>
+                                <source srcset="img/brands-4.webp" type="image/webp"><img src="img/brands-4.jpg" alt="Microlancer">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="title__page">
+                    <h2 class="title title-white">Contact us</h2>
+                    <h3 class="sub__title sub__title-white">Proin iaculis purus consequat sem </h3>
+                </div>
+
+                <form action="#" method="POST">
+                    <div class="contact__form-input">
+                        <div class="contact__form">
+                            <input class="contact-input " name="name" placeholder="your Name *" required type="text">
+                            <input class="contact-input " name="email" placeholder="your e-mail *" required type="email">
+                            <input class="contact-input " name="name" placeholder="subject" type="text">
+                        </div>
+
+                        <div class="contact__form">
+                            <textarea class="contact-input input-message" name="message" placeholder="your Message *" required></textarea>
+                        </div>
+                    </div>
+                    <div class="contact__button">
+                        <button type="submit" class="button btn-yelow btn-contact">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__copyright">
+                    © Copyright 2014 FreebiesXpress.com
+                </div>
+                <div class="social footer-social">
+                    <a class="twitter-social" href="#"><i class="fa social-block twitter-block  fa-twitter" aria-hidden="true"></i></a>
+
+                    <a class="facebook-social" href="#"><i class="fa social-block facebook-block fa-facebook" aria-hidden="true"></i></a>
+
+                    <a class="google-social" href="#"><i class="fa social-block google-block fa-google-plus" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://use.fontawesome.com/9704fdc858.js"></script>
+    <script src="js/scrollSmooth.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/script.min.js"></script>
+</body>
+
+</html>

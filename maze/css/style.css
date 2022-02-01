@@ -1,0 +1,341 @@
+/* Null */
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+}
+*,
+*::before,
+*::after {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+:focus,
+:active {
+   outline: none;
+}
+a:focus,
+a:active {
+   outline: none;
+}
+nav,
+footer,
+header,
+aside {
+   display: block;
+}
+html,
+body {
+   height: 100%;
+   width: 100%;
+   font-size: 100%;
+   line-height: 1;
+   font-size: 14px;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+   text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+   font-family: inherit;
+}
+input[type="text"]::-ms-clear {
+   display: none;
+   width: 0;
+   height: 0;
+}
+input[type="text"]::-ms-reveal {
+   display: none;
+   width: 0;
+   height: 0;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+   display: none;
+}
+button {
+   cursor: pointer;
+}
+button::-moz-focus-inner {
+   padding: 0;
+   border: 0;
+}
+a,
+a:focus-visible {
+   text-decoration: none;
+}
+a:hover {
+   text-decoration: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+ul,
+li {
+   list-style: none;
+}
+img {
+   vertical-align: top;
+}
+
+/* ======================================================================= */
+
+body {
+   font-family: Arial, Helvetica, sans-serif;
+   width: 100%;
+   height: 100%;
+}
+
+.wrapper {
+   width: 100%;
+   min-height: 100%;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.wrapper h1 {
+   margin-bottom: 30px;
+   max-width: 600px;
+   text-align: center;
+   font-size: 32px;
+   line-height: 1.2em;
+}
+
+.maze {
+   display: grid;
+   padding: 0px 30px;
+   /* grid-template-columns: repeat(4, 25%); */
+}
+
+.maze__item {
+   width: 80px;
+   height: 80px;
+   border: 1px solid #3e3e3e;
+   cursor: pointer;
+   position: relative;
+   transition: 0.2s;
+}
+
+.maze__item.maze-block {
+   cursor: default;
+}
+
+.maze__item.maze-block::before {
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 20px;
+   height: 20px;
+
+   width: 88%;
+   height: 88%;
+   background-color: rgb(17, 17, 17);
+}
+
+.top::before {
+   content: "";
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   background: url(../img/down-arrow.png) no-repeat;
+
+   background-size: cover;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.right::before {
+   content: "";
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   background: url(../img/down-arrow.png) no-repeat;
+
+   background-size: cover;
+   top: 50%;
+   left: 54%;
+   transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.left::before {
+   content: "";
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   background: url(../img/down-arrow.png) no-repeat;
+
+   background-size: cover;
+   top: 50%;
+   left: 46%;
+   transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.rightTop::before {
+   content: "";
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   background: url(../img/left.png) no-repeat;
+
+   background-size: cover;
+   top: 45%;
+   left: 50%;
+   transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.bot::before {
+   content: "";
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   background: url(../img/down-arrow.png) no-repeat;
+
+   background-size: cover;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.leftTop::before {
+   content: "";
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   background: url(../img/right.png) no-repeat;
+
+   background-size: cover;
+   top: 45%;
+   left: 50%;
+   transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.rightBot::before {
+   content: "";
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   background: url(../img/right.png) no-repeat;
+
+   background-size: cover;
+   top: 60%;
+   left: 45%;
+   transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.leftBot::before {
+   content: "";
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   background: url(../img/left.png) no-repeat;
+
+   background-size: cover;
+   top: 55%;
+   left: 50%;
+   transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.topRight::before {
+   content: "";
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   background: url(../img/right.png) no-repeat;
+
+   background-size: cover;
+   top: 57%;
+   left: 56%;
+   transform: translate(-50%, -50%);
+}
+
+.botRight::before {
+   content: "";
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   background: url(../img/left.png) no-repeat;
+
+   background-size: cover;
+   top: 50%;
+   left: 58%;
+   transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.botLeft::before {
+   content: "";
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   background: url(../img/right.png) no-repeat;
+
+   background-size: cover;
+   top: 45%;
+   left: 43%;
+   transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.topLeft::before {
+   content: "";
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   background: url(../img/left.png) no-repeat;
+
+   background-size: cover;
+   top: 50%;
+   left: 46%;
+   transform: translate(-50%, -50%);
+}
+
+.maze__item.start::before {
+   content: "START";
+   color: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: 700;
+   font-size: 16px;
+   letter-spacing: 0.5px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-image: none;
+
+   width: 88%;
+   height: 88%;
+   background-color: rgb(0, 119, 255);
+}
+
+.maze__item.finish::before {
+   content: "FINISH";
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: 700;
+   font-size: 16px;
+   letter-spacing: 0.5px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-image: none;
+
+   width: 88%;
+   height: 88%;
+   background-color: rgb(255, 187, 0);
+}
+
